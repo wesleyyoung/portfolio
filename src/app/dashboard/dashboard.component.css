@@ -1,0 +1,35 @@
+.banner {
+    background-color: #303f9f;
+}
+
+.banner-title {
+    font-family: SrcSansProExtraLight;
+    color: white;
+    font-size: 75px;
+}
+
+.tile {
+    position: relative !important;
+    display: inline-block !important;
+}
+
+.banner-container {
+    width: 100%;
+    height: 100%;
+    line-height: 100vh;
+}
+  
+.banner-container > span {
+    vertical-align: middle;
+    display: inline-block;
+    line-height: normal;
+}
+
+.banner-section {
+    background-size: cover !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-position-x: left;
+    background-repeat: no-repeat;
+}

@@ -1,0 +1,74 @@
+@import '~@angular/material/theming';
+@include mat-core();
+$soft-grey: (
+    50: rgb(25, 25, 25),
+    100: rgb(25, 25, 25),
+    200: rgb(25, 25, 25),
+    300: rgb(30, 30, 30),
+    400: rgb(30, 30, 30),
+    500: rgb(30, 30, 30),
+    600: rgb(35, 35, 35),
+    700: rgb(35, 35, 35),
+    800: rgb(35, 35, 35),
+    900: rgb(35, 35, 35),
+    A100: rgb(40, 40, 40),
+    A200: rgb(40, 40, 40),
+    A400: rgb(40, 40, 40),
+    A700: rgb(40, 45, 45),
+    contrast: (
+      50: white,
+      100: white,
+      200: white,
+      300: white,
+      400: white,
+      500: white,
+      600: white,
+      700: white,
+      800: white,
+      900: white,
+      A100: white,
+      A200: white,
+      A400: white,
+      A700: white,
+    )
+  );
+$cool-indigo: (
+  50: #303f9f,
+    100: #303f9f,
+    200: #303f9f,
+    300: #303f9f,
+    400: #303f9f,
+    500: #303f9f,
+    600: #303f9f,
+    700: #303f9f,
+    800: #303f9f,
+    900: #303f9f,
+    A100: #303f9f,
+    A200: #303f9f,
+    A400: #303f9f,
+    A700: #303f9f,
+    contrast: (
+      50: white,
+      100: white,
+      200: white,
+      300: white,
+      400: white,
+      500: white,
+      600: white,
+      700: white,
+      800: white,
+      900: white,
+      A100: white,
+      A200: white,
+      A400: white,
+      A700: white,
+    )
+  );
+$portfolio-primary: mat-palette($soft-grey);
+$portfolio-accent: mat-palette($cool-indigo);
+$portfolio-warn: mat-palette($mat-red);
+
+$portfolio-theme: mat-dark-theme($portfolio-primary, $portfolio-accent, $portfolio-warn);
+
+@include angular-material-theme($portfolio-theme);
+

@@ -1,0 +1,20 @@
+<div class="full-height-container banner banner-section">
+    <mat-grid-list cols="6" rowHeight="100%" style="overflow-x: visible">
+        <mat-grid-tile [colspan]="!isMobile ? 3 : 6" rowspan="1">
+            <div class="banner-container">
+                <span>
+                        <img src="./assets/code.png"/>
+                        <h1 class="banner-title">{{title.txt}}</h1>
+                </span>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="3" rowspan="1" *ngIf="!isMobile">
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>
+
+<div class="full-height-container">
+    <div class="content">
+
+    </div>
+</div>

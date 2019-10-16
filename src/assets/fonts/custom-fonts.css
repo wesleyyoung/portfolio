@@ -1,0 +1,20 @@
+@font-face {
+    font-family: Pacifico;
+    src: url(./Pacifico-Regular.ttf) format("truetype");
+}
+@font-face {
+    font-family: Amatic;
+    src: url(./AmaticSC-Regular.ttf) format("truetype");
+}
+@font-face {
+    font-family: SrcSansPro;
+    src: url(./SourceSansPro-Regular.ttf) format("truetype");
+}
+@font-face {
+    font-family: SrcSansProLight;
+    src: url(./SourceSansPro-Light.ttf) format("truetype");
+}
+@font-face {
+    font-family: SrcSansProExtraLight;
+    src: url(./SourceSansPro-ExtraLight.ttf) format("truetype");
+}

@@ -1,0 +1,13 @@
+.toolbar {
+    z-index: 500;
+    position: fixed;
+    transition: background-color 1s linear;
+}
+
+.solid-nav-bar {
+    background-color: rgb(20, 20, 20);
+}
+
+/*button {
+    font-family: 'Pacifico' !important;
+}*/
