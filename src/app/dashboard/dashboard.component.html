@@ -16,31 +16,43 @@
     </mat-grid-list>
 </div>
 <div class="container">
-    <div class="content">
+    <div class="content-strip">
         <h1 class="content-headline">Skills</h1>
-        <mat-grid-list cols="6" rowHeight="500px" style="overflow-x: visible">
-            <mat-grid-tile [colspan]="!isMobile ? 3 : 6" rowspan="1">
+        <mat-grid-list cols="12" rowHeight="500px" style="overflow-x: visible">
+            <mat-grid-tile [colspan]="!isMobile ? 4 : 12" rowspan="1">
                 <img src="./assets/imgs/nodejs.png" alt="NodeJS" class="skill-img">
                 <p class="skill-title">
                     Node<span class="nodejs-color">JS</span>
                 </p>
             </mat-grid-tile>
-            <mat-grid-tile [colspan]="!isMobile ? 3 : 6" rowspan="1">
+            <mat-grid-tile [colspan]="!isMobile ? 4 : 12" rowspan="1">
                 <img src="./assets/imgs/typescript.png" alt="Typescript" class="skill-img">
                 <p class="skill-title">
                     Type<span class="typescript-color">Script</span>
                 </p>
             </mat-grid-tile>
-            <mat-grid-tile [colspan]="!isMobile ? 3 : 6" rowspan="1">
+            <mat-grid-tile [colspan]="!isMobile ? 4 : 12" rowspan="1">
                 <img src="./assets/imgs/aws.png" alt="AWS" class="skill-img">
                 <p class="skill-title">
                     Amazon<span class="aws-color"> Web Services</span>
                 </p>
             </mat-grid-tile>
-            <mat-grid-tile [colspan]="!isMobile ? 3 : 6" rowspan="1">
+            <mat-grid-tile [colspan]="!isMobile ? 4 : 12" rowspan="1">
                 <img src="./assets/imgs/csharp.png" alt="CSharp" class="skill-img">
                 <p class="skill-title">
                     C<span class="csharp-color">#</span>
+                </p>
+            </mat-grid-tile>
+            <mat-grid-tile [colspan]="!isMobile ? 4 : 12" rowspan="1">
+                <img src="./assets/imgs/angular.png" alt="Angular" class="skill-img">
+                <p class="skill-title">
+                    Angular
+                </p>
+            </mat-grid-tile>
+            <mat-grid-tile [colspan]="!isMobile ? 4 : 12" rowspan="1">
+                <img src="./assets/imgs/ionic.png" alt="ionic" class="skill-img">
+                <p class="skill-title">
+                    Ionic <span class="ionic-color">Framework</span>
                 </p>
             </mat-grid-tile>
         </mat-grid-list>
