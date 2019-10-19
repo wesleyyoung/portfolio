@@ -1,11 +1,21 @@
 .banner {
-    background-color: #303f9f;
+    /*background-color: #303f9f;*/
+    background-image: url(../../assets/code_banner.webp);
 }
 
 .banner-title {
-    font-family: SrcSansProExtraLight;
     color: white;
     font-size: 75px;
+    text-decoration-line: underline;
+    text-decoration-color: #81c784;
+    margin-bottom: 0 !important;
+}
+.banner-subtitle {
+    color: white;
+    font-size: 45px;
+    font-family: SrcSansProLight;
+    max-width: 650px !important;
+    margin-top: 0 !important;
 }
 
 .tile {
@@ -17,6 +27,7 @@
     width: 100%;
     height: 100%;
     line-height: 100vh;
+    background-color: rgba(0, 0, 0, .65);
 }
   
 .banner-container > span {
@@ -32,4 +43,26 @@
     -o-background-size: cover;
     background-position-x: left;
     background-repeat: no-repeat;
+}
+
+.skill-title {
+    color: white;
+    font-size: 45px;
+    font-family: SrcSansProLight;
+}
+
+.nodejs-color {
+    color: #81cf08;
+}
+
+.typescript-color {
+    color: #007acc;
+}
+
+.aws-color {
+    color: #ff9900;
+}
+
+.csharp-color {
+    color: #953dac;
 }

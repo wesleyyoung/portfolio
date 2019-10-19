@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
+import { MatIconRegistry } from '@angular/material/icon';
 import { fromEvent, interval } from 'rxjs';
 import { switchMap, takeUntil, pairwise } from 'rxjs/operators';
 import { TimeInterval } from 'rxjs/internal/operators/timeInterval';
@@ -29,14 +31,22 @@ export class DashboardComponent implements OnInit {
       style: ""
     }
   ];
-  
+
   public titleIndex: number = 0;
   public title: any = this.titles[this.titleIndex];
   public titleChange;
   public isMobile: boolean = this.api.isMobileWatcher;
   public isMedium: boolean = this.api.isMediumWatcher;
 
-  constructor(private api: ApiService) {
+  constructor(
+    private api: ApiService,
+    iconRegistry: MatIconRegistry,
+    sanitizer: DomSanitizer
+  ) {
+
+    iconRegistry.addSvgIcon('linkedin', sanitizer.bypassSecurityTrustResourceUrl('assets/linkedin.svg'));
+    iconRegistry.addSvgIcon('github', sanitizer.bypassSecurityTrustResourceUrl('assets/github.svg'));
+    iconRegistry.addSvgIcon('twitter', sanitizer.bypassSecurityTrustResourceUrl('assets/twitter.svg'));
 
     this.titleChange = setInterval(() => {
 
@@ -46,13 +56,12 @@ export class DashboardComponent implements OnInit {
         this.titleIndex = 0;
       }
 
-      this.title = this.titles[this.titleIndex];
+      // this.title = this.titles[this.titleIndex];
 
     }, 5000);
   }
 
   ngOnInit() {
-    this.titleChange.value;
     this.api.isMobile.subscribe(isMobile => {
       this.isMobile = isMobile;
     });

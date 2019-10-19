@@ -32,43 +32,99 @@ $soft-grey: (
       A700: white,
     )
   );
-$cool-indigo: (
-  50: #303f9f,
-    100: #303f9f,
-    200: #303f9f,
-    300: #303f9f,
-    400: #303f9f,
-    500: #303f9f,
-    600: #303f9f,
-    700: #303f9f,
-    800: #303f9f,
-    900: #303f9f,
-    A100: #303f9f,
-    A200: #303f9f,
-    A400: #303f9f,
-    A700: #303f9f,
+$cool-green: (
+  50: #81c784,
+    100: #81c784,
+    200: #81c784,
+    300: #81c784,
+    400: #81c784,
+    500: #81c784,
+    600: #81c784,
+    700: #81c784,
+    800: #81c784,
+    900: #81c784,
+    A100: #81c784,
+    A200: #81c784,
+    A400: #81c784,
+    A700: #81c784,
     contrast: (
-      50: white,
-      100: white,
-      200: white,
-      300: white,
-      400: white,
-      500: white,
-      600: white,
-      700: white,
-      800: white,
-      900: white,
-      A100: white,
-      A200: white,
-      A400: white,
-      A700: white,
+      50: #212121,
+      100: #212121,
+      200: #212121,
+      300: #212121,
+      400: #212121,
+      500: #212121,
+      600: #212121,
+      700: #212121,
+      800: #212121,
+      900: #212121,
+      A100: #212121,
+      A200: #212121,
+      A400: #212121,
+      A700: #212121,
     )
   );
 $portfolio-primary: mat-palette($soft-grey);
-$portfolio-accent: mat-palette($cool-indigo);
+$portfolio-accent: mat-palette($cool-green);
 $portfolio-warn: mat-palette($mat-red);
 
 $portfolio-theme: mat-dark-theme($portfolio-primary, $portfolio-accent, $portfolio-warn);
 
 @include angular-material-theme($portfolio-theme);
 
+.content-headline {
+  color: white;
+  margin-bottom: 50px;
+  font-size: 60px;
+  font-weight: 300;
+  font-family: SrcSansProLight !important;
+}
+
+.skill-card {
+  background-color: transparent !important;
+  height: 100%;
+  width: 100%;
+}
+
+.skill-card > img {
+  width: 400px !important;
+}
+
+.skill-img {
+  width: 300px !important;
+}
+
+.skill-card > .mat-card-header {
+  text-align: center !important;
+}
+
+.skill-card > .mat-card-header > .mat-card-header-text {
+  width: 100%;
+}
+
+.loud-btn {
+  margin: 0 25% 0 25%;
+  height: 65px;
+  width: 100%;
+  font-family: pacifico !important;
+  font-size: 35px;
+}
+
+.white {
+  background-color: transparent !important;
+  color: white !important;
+}
+
+.accent {
+  color: #81c784 !important;
+}
+
+.dash {
+  border-bottom: 2px solid #81c784; 
+  margin: 0 25% 0 25%; 
+  height: 2px;
+}
+
+.pacifico {
+  font-family: 'Pacifico' !important;
+}
