@@ -1,5 +1,5 @@
 <mat-toolbar color="primary" class="toolbar" [class.solid-nav-bar]="!atTop" [class.transparent]="atTop">
-    <span class="pacifico">Wesley Young</span>
+    <span class="my-name">Wesley Young<span class="accent">.</span></span>
     <span style="flex: 1 1 auto;"></span>
     <button mat-button routerLink="/">
         HOME
@@ -12,3 +12,30 @@
     </button>
 </mat-toolbar>
 <router-outlet></router-outlet>
+<div class="container true-black">
+        <div class="content">
+            <mat-grid-list cols="6" rowHeight="250px" style="overflow-x: visible">
+                <mat-grid-tile [colspan]="!isMobile ? 3 : 6" rowspan="1">
+                    <h2 class="footer-headline">Contact</h2>
+                    <div class="dash"></div>
+                    <p class="footer-txt">wesley.young.portfolio@gmail.com</p>
+                    <p class="footer-txt">435.229.8832</p>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="!isMobile ? 3 : 6" rowspan="1">
+                    <h2 class="footer-headline">Site Map</h2>
+                    <div class="dash"></div>
+                    <p style="text-align: center;">
+                        <button mat-button color="accent" routerLink="/" style="padding: 0 25% 0 25%;">
+                            HOME
+                        </button>
+                        <button mat-button color="accent" routerLink="about" style="padding: 0 25% 0 25%;">
+                            ABOUT
+                        </button>
+                        <button mat-button color="accent" style="padding: 0 25% 0 25%;">
+                            CONTACT
+                        </button>
+                    </p>
+                </mat-grid-tile>
+            </mat-grid-list>
+        </div>
+    </div>

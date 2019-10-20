@@ -12,7 +12,7 @@
     const 
         privatekey = fs.readFileSync('/etc/letsencrypt/live/wesprodev.com/privkey.pem', 'utf8'),
         certificate = fs.readFileSync('/etc/letsencrypt/live/wesprodev.com/cert.pem', 'utf8'),
-        ca = fs.readFileSync('/etc/letsencrypt/live/weprodev.com/chain.pem', 'utf8'),
+        ca = fs.readFileSync('/etc/letsencrypt/live/weprodev.com/fullchain.pem', 'utf8'),
         credentials = {
             key: privatekey,
             cert: certificate,

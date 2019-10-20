@@ -2,13 +2,16 @@
     <mat-grid-list cols="6" rowHeight="100%" style="overflow-x: visible">
         <mat-grid-tile colspan="6" rowspan="1">
             <div class="banner-container">
-                <span>
-                    <h1 class="banner-title pacifico">Web Developer<span class="accent">.</span></h1>
+                <div>
+                    <img src="./assets/imgs/profile.png" class="banner-img" [class.banner-img-mobile]="isMobile">
+                    <h1 class="banner-title" [class.banner-title-mobile]="isMobile">
+                        Web Developer<span class="accent">.</span>
+                    </h1>
                     <!--<p class="banner-subtitle">Focused on <span class="accent">powerful</span> designs</p>-->
-                    <button mat-raised-button color="accent" class="loud-btn">
+                    <button mat-raised-button color="accent" class="loud-btn" [class.loud-btn-mobile]="isMobile">
                         Get In Touch.
                     </button>
-                </span>
+                </div>
             </div>
         </mat-grid-tile>
     </mat-grid-list>
@@ -39,34 +42,6 @@
                         <button mat-button [style.color]="skill.color" class="skill-btn">MORE</button>
                     </mat-card-actions>
                 </mat-card>
-            </mat-grid-tile>
-        </mat-grid-list>
-    </div>
-</div>
-<div class="container true-black">
-    <div class="content">
-        <mat-grid-list cols="6" rowHeight="250px" style="overflow-x: visible">
-            <mat-grid-tile [colspan]="!isMobile ? 3 : 6" rowspan="1">
-                <h2 class="footer-headline">Contact</h2>
-                <div class="dash"></div>
-                <p class="footer-txt">wesley.young.portfolio@gmail.com</p>
-                <p class="footer-txt">435.229.8832</p>
-            </mat-grid-tile>
-            <mat-grid-tile [colspan]="!isMobile ? 3 : 6" rowspan="1">
-                <h2 class="footer-headline">Site Map</h2>
-                <div class="dash"></div>
-                <p style="text-align: center;">
-                    <button mat-button color="accent" routerLink="/" style="padding: 0 25% 0 25%;">
-                        HOME
-                    </button>
-                    <button mat-button color="accent" routerLink="about" style="padding: 0 25% 0 25%;">
-                        ABOUT
-                    </button>
-                    <button mat-button color="accent" style="padding: 0 25% 0 25%;">
-                        CONTACT
-                    </button>
-                </p>
-
             </mat-grid-tile>
         </mat-grid-list>
     </div>

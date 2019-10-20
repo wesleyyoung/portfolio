@@ -5,13 +5,15 @@
     width: 100%;
     font-family: pacifico !important;
     font-size: 35px;
-    border-radius: 0 !important;
-    bottom: 18px;
+    border-radius: 0 0 50px 50px !important;
+    bottom: 30px;
     padding-bottom: 10px !important;
-    margin-bottom: 10px !important;
     text-decoration: none;
 }
-
+.loud-btn-mobile {
+    font-size: 30px !important;
+    bottom: 22px !important;
+}
 .loud-btn:hover {
     transition: all ease 1s !important;
     text-decoration: underline;
@@ -29,9 +31,16 @@
     z-index: 10;
     position: relative;
     font-size: 75px;
-    text-decoration-line: underline;
+    font-family: pacifico;
+    pointer-events: none !important;
+    /*text-decoration-line: underline;*/
     text-decoration-color: #81c784;
-    margin-bottom: 0 !important;
+    text-shadow: 0 8px 10px black;
+    margin: 0 !important;
+}
+
+.banner-title-mobile {
+    font-size: 55px !important;
 }
 
 .banner-subtitle {
@@ -42,22 +51,28 @@
     margin-top: 0 !important;
 }
 
-.tile {
-    position: relative !important;
-    display: inline-block !important;
-}
-
 .banner-container {
     width: 100%;
     height: 100%;
     line-height: 100vh;
-    background-color: rgba(0, 0, 0, .65);
+    background-color: rgba(0, 0, 0, .3);
 }
   
-.banner-container > span {
+.banner-container > div {
     vertical-align: middle;
     display: inline-block;
     line-height: normal;
+}
+
+.banner-img {
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+}
+
+.banner-img-mobile {
+    width: 200px;
+    height: 200px;
 }
 
 .banner-section {
@@ -94,4 +109,9 @@
     font-size: 20px;
     width: 80%;
     height: 50px;
+}
+
+.tile {
+    position: relative !important;
+    display: inline-block !important;
 }
