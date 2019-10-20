@@ -13,11 +13,14 @@
     app.use(bodyParser.json());
 
     app.use('/', express.static(__dirname + '/dist/portfolio'));
-    app.use('/.well-known/acme-challenge/y8WChrFxgpwqKTj96uJ4x-8VsbjQ1VRneboLVB9oJp4', express.static(__dirname + '../portfolio.pem'));
     app.use('/node_modules', express.static(__dirname + '/node_modules'));
 
     app.set('PORT', process.env.PORT || 80);
     app.set('SECURE_PORT', process.env.SECURE_PORT || 443);
+    
+    app.get('/.well-known/acme-challenge/ZibEaizWsGA1R2JcugHGYKsiYgfO85uZ2EaBPYOxvd0', (res, req) => {
+        res.end(fs.readFileSync(__dirname + '../portfolio.pem'));
+    })
 
     server.listen(app.get('PORT'), () => {
         console.log(`Listening on port ${app.get('PORT')}...`);
