@@ -6,6 +6,14 @@ import { switchMap, takeUntil, pairwise } from 'rxjs/operators';
 import { TimeInterval } from 'rxjs/internal/operators/timeInterval';
 import { ApiService } from '../api.service';
 
+export interface Skill {
+  name: string;
+  name_accent: string;
+  img: string;
+  rating: number;
+  color: string;
+}
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -37,6 +45,44 @@ export class DashboardComponent implements OnInit {
   public titleChange;
   public isMobile: boolean = this.api.isMobileWatcher;
   public isMedium: boolean = this.api.isMediumWatcher;
+  public skills: Array<Skill> = [{
+      name: 'Node',
+      name_accent: 'JS',
+      img: './assets/imgs/nodejs.png',
+      color: '#81cf08',
+      rating: 5
+    }, {
+      name: 'Type',
+      name_accent: 'Script',
+      img: './assets/imgs/typescript.png',
+      color: '#007acc',
+      rating: 3
+    }, {
+      name: 'Amazon ',
+      name_accent: 'Web Services',
+      img: './assets/imgs/aws.png',
+      color: '#ff9900',
+      rating: 4
+    }, {
+      name: 'C',
+      name_accent: '#',
+      img: './assets/imgs/csharp.png',
+      color: '#953dac',
+      rating: 2
+    }, {
+      name: 'Angular',
+      name_accent: '',
+      img: './assets/imgs/angular.png',
+      color: '#dd0031',
+      rating: 4
+    }, {
+      name: 'Ionic ',
+      name_accent: 'Framework',
+      img: './assets/imgs/ionic.png',
+      color: '#008bff',
+      rating: 3
+    }
+  ];
 
   constructor(
     private api: ApiService,
