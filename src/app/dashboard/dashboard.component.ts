@@ -102,7 +102,7 @@ export class DashboardComponent implements OnInit {
     }, {
       name: 'Linux',
       name_accent: '',
-      img: './assets/imgs/linux.png',
+      img: './assets/imgs/linux1.png',
       color: '#f79c3d',
       rating: 4
     }

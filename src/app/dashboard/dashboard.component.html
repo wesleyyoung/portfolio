@@ -55,15 +55,18 @@
             <mat-grid-tile [colspan]="!isMobile ? 3 : 6" rowspan="1">
                 <h2 class="footer-headline">Site Map</h2>
                 <div class="dash"></div>
-                <button mat-button routerLink="/">
-                    HOME
-                </button>
-                <button mat-button routerLink="about">
-                    ABOUT
-                </button>
-                <button mat-button>
-                    CONTACT
-                </button>
+                <p style="text-align: center;">
+                    <button mat-button color="accent" routerLink="/" style="padding: 0 25% 0 25%;">
+                        HOME
+                    </button>
+                    <button mat-button color="accent" routerLink="about" style="padding: 0 25% 0 25%;">
+                        ABOUT
+                    </button>
+                    <button mat-button color="accent" style="padding: 0 25% 0 25%;">
+                        CONTACT
+                    </button>
+                </p>
+
             </mat-grid-tile>
         </mat-grid-list>
     </div>
