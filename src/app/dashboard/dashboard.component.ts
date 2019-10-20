@@ -81,6 +81,30 @@ export class DashboardComponent implements OnInit {
       img: './assets/imgs/ionic.png',
       color: '#008bff',
       rating: 3
+    }, {
+      name: 'HTML',
+      name_accent: '5',
+      img: './assets/imgs/html5.png',
+      color: '#ff6d00',
+      rating: 5
+    }, {
+      name: 'Python',
+      name_accent: '',
+      img: './assets/imgs/python.png',
+      color: '#ffd747',
+      rating: 2
+    }, {
+      name: 'Mongo',
+      name_accent: 'DB',
+      img: './assets/imgs/mongodb.png',
+      color: '#81c564',
+      rating: 3
+    }, {
+      name: 'Linux',
+      name_accent: '',
+      img: './assets/imgs/linux.png',
+      color: '#f79c3d',
+      rating: 4
     }
   ];
 

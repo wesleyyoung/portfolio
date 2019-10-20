@@ -17,7 +17,7 @@ export class ApiService {
 
   public mobileWidthTrigger = 750;
   public mobileHeightTrigger = 600;
-  public mediumWidthTrigger = 2000;
+  public mediumWidthTrigger = 1020;
   public isMobileWatcher: boolean = window.innerWidth <= this.mobileWidthTrigger || window.innerHeight <= this.mobileHeightTrigger;
   public isMobile = new Subject<boolean>();
   public isMediumWatcher: boolean = !this.isMobileWatcher && window.innerWidth <= this.mediumWidthTrigger;
