@@ -15,7 +15,7 @@ import { DOCUMENT } from '@angular/common';
 })
 export class ApiService {
 
-  public mobileWidthTrigger = 750;
+  public mobileWidthTrigger = 600;
   public mobileHeightTrigger = 600;
   public mediumWidthTrigger = 1020;
   public isMobileWatcher: boolean = window.innerWidth <= this.mobileWidthTrigger || window.innerHeight <= this.mobileHeightTrigger;

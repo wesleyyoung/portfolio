@@ -16,19 +16,24 @@
 <div class="container">
     <div class="content-strip">
         <h1 class="content-headline">Skills</h1>
-        <mat-grid-list cols="10" rowHeight="400px" style="overflow-x: visible">
-            <mat-grid-tile [colspan]="!isMobile ? 2 : 10" rowspan="1" *ngFor="let skill of skills">
-                <mat-card class="skill-card" >
+        <mat-grid-list [cols]="isMedium ? 12 : 10" rowHeight="400px" style="overflow-x: visible">
+            <mat-grid-tile [colspan]="isMobile ? 10 : isMedium ? 4 : 2" rowspan="1" *ngFor="let skill of skills">
+                <mat-card class="skill-card">
                     <img [src]="skill.img" alt="NodeJS" class="skill-img">
                     <p class="skill-title">
                         {{skill.name}}<span [style.color]="skill.color">{{skill.name_accent}}</span>
                     </p>
                     <mat-card-content>
-                        <mat-icon [style.color]="skill.color" [svgIcon]="skill.rating >= 1 ? 'star' : 'emptyStar'" aria-hidden="false" aria-label="star" class="skill-star"></mat-icon>
-                        <mat-icon [style.color]="skill.color" [svgIcon]="skill.rating >= 2 ? 'star' : 'emptyStar'" aria-hidden="false" aria-label="star" class="skill-star"></mat-icon>
-                        <mat-icon [style.color]="skill.color" [svgIcon]="skill.rating >= 3 ? 'star' : 'emptyStar'" aria-hidden="false" aria-label="star" class="skill-star"></mat-icon>
-                        <mat-icon [style.color]="skill.color" [svgIcon]="skill.rating >= 4 ? 'star' : 'emptyStar'" aria-hidden="false" aria-label="star" class="skill-star"></mat-icon>
-                        <mat-icon [style.color]="skill.color" [svgIcon]="skill.rating >= 5 ? 'star' : 'emptyStar'" aria-hidden="false" aria-label="star" class="skill-star"></mat-icon>
+                        <mat-icon [style.color]="skill.color" [svgIcon]="skill.rating >= 1 ? 'star' : 'emptyStar'"
+                            aria-hidden="false" aria-label="star" class="skill-star"></mat-icon>
+                        <mat-icon [style.color]="skill.color" [svgIcon]="skill.rating >= 2 ? 'star' : 'emptyStar'"
+                            aria-hidden="false" aria-label="star" class="skill-star"></mat-icon>
+                        <mat-icon [style.color]="skill.color" [svgIcon]="skill.rating >= 3 ? 'star' : 'emptyStar'"
+                            aria-hidden="false" aria-label="star" class="skill-star"></mat-icon>
+                        <mat-icon [style.color]="skill.color" [svgIcon]="skill.rating >= 4 ? 'star' : 'emptyStar'"
+                            aria-hidden="false" aria-label="star" class="skill-star"></mat-icon>
+                        <mat-icon [style.color]="skill.color" [svgIcon]="skill.rating >= 5 ? 'star' : 'emptyStar'"
+                            aria-hidden="false" aria-label="star" class="skill-star"></mat-icon>
                     </mat-card-content>
                     <mat-card-actions>
                         <button mat-button [style.color]="skill.color" class="skill-btn">MORE</button>
@@ -48,7 +53,17 @@
                 <p class="footer-txt">435.229.8832</p>
             </mat-grid-tile>
             <mat-grid-tile [colspan]="!isMobile ? 3 : 6" rowspan="1">
-
+                <h2 class="footer-headline">Site Map</h2>
+                <div class="dash"></div>
+                <button mat-button routerLink="/">
+                    HOME
+                </button>
+                <button mat-button routerLink="about">
+                    ABOUT
+                </button>
+                <button mat-button>
+                    CONTACT
+                </button>
             </mat-grid-tile>
         </mat-grid-list>
     </div>
