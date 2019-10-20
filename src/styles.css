@@ -35,6 +35,10 @@ body {
     background-color: whitesmoke;
   }
 
+  .true-black {
+    background-color: black;
+  }
+
   .content-np {
     width: 100%;
     align-self: center;
@@ -47,7 +51,7 @@ body {
   .content-strip {
     width: 100%;
     align-self: center;
-    max-width: 2400px;
+    max-width: 1600px;
     padding: 50px 0 50px 0;
     display: inline-block;
     text-align: auto;

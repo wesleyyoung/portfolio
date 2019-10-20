@@ -1,15 +1,39 @@
+
+.loud-btn {
+    z-index: 0;
+    height: 65px;
+    width: 100%;
+    font-family: pacifico !important;
+    font-size: 35px;
+    border-radius: 0 !important;
+    bottom: 18px;
+    padding-bottom: 10px !important;
+    margin-bottom: 10px !important;
+    text-decoration: none;
+}
+
+.loud-btn:hover {
+    transition: all ease 1s !important;
+    text-decoration: underline;
+    text-decoration-color: black;
+}
+
 .banner {
     /*background-color: #303f9f;*/
     background-image: url(../../assets/code_banner.webp);
 }
 
 .banner-title {
-    color: white;
+    color: whitesmoke;
+    font-weight: 100;
+    z-index: 10;
+    position: relative;
     font-size: 75px;
     text-decoration-line: underline;
     text-decoration-color: #81c784;
     margin-bottom: 0 !important;
 }
+
 .banner-subtitle {
     color: white;
     font-size: 45px;
@@ -45,35 +69,114 @@
     background-repeat: no-repeat;
 }
 
+.skill-card {
+    background-color: transparent !important;
+    height: 100%;
+    width: 100%;
+}
+
 .skill-title {
     color: white;
-    font-size: 45px;
+    height: 70px !important;
+    font-size: 32px;
     font-family: SrcSansProLight;
 }
 
-.nodejs-color {
+.skill-card-left {
+    text-align: right;
+}
+
+.skill-card-right {
+    text-align: left;
+}
+
+.nodejs-theme {}
+.nodejs-theme > .skill-color {
+    color: #81cf08;
+}
+.nodejs-theme > mat-card-actions > .skill-btn {
+    color: #81cf08;
+}
+.nodejs-theme > mat-card-content > .skill-star {
+    color: #81cf08;
+}
+.nodejs-theme > p > .skill-color {
     color: #81cf08;
 }
 
-.typescript-color {
+.typescript-theme {}
+.typescript-theme > .skill-color {
+    color: #007acc;
+}
+.typescript-theme > p > .skill-color {
+    color: #007acc;
+}
+.typescript-theme > mat-card-actions > .skill-btn {
+    color: #007acc;
+}
+.typescript-theme > mat-card-content > .skill-star {
     color: #007acc;
 }
 
-.aws-color {
-    color: #ff9900;
+.aws-theme {}
+.aws-theme > .skill-color {
+    color: #ff9900
+}
+.aws-theme > p > .skill-color {
+    color: #ff9900
+}
+.aws-theme > mat-card-actions > .skill-btn {
+    color: #ff9900
+}
+.aws-theme > mat-card-content > .skill-star {
+    color: #ff9900
 }
 
-.csharp-color {
-    color: #953dac;
+.csharp-theme {}
+.csharp-theme > .skill-color {
+    color: #953dac
+}
+.csharp-theme > p > .skill-color {
+    color: #953dac
+}
+.csharp-theme > mat-card-actions > .skill-btn {
+    color: #953dac
+}
+.csharp-theme > mat-card-content > .skill-star {
+    color: #953dac
 }
 
-.angular-color {
-    color: #dd0031;
+.angular-theme {}
+.angular-theme > .skill-color {
+    color: #dd0031
 }
-.googleads-color {
-    color: #4285f4;
+.angular-theme > p > .skill-color {
+    color: #dd0031
+}
+.angular-theme > mat-card-actions > .skill-btn {
+    color: #dd0031
+}
+.angular-theme > mat-card-content > .skill-star {
+    color: #dd0031
 }
 
-.ionic-color {
+.ionic-theme {}
+.ionic-theme > .skill-color {
     color: #008bff;
+}
+.ionic-theme > p > .skill-color {
+    color: #008bff;
+}
+.ionic-theme > mat-card-actions > .skill-btn {
+    color: #008bff;
+}
+.ionic-theme > mat-card-content > .skill-star {
+    color: #008bff;
+}
+
+.skill-btn {
+    font-family: SrcSansPro;
+    font-size: 20px;
+    width: 80%;
+    height: 50px;
 }

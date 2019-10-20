@@ -1,12 +1,10 @@
 <div class="full-height-container banner banner-section">
     <mat-grid-list cols="6" rowHeight="100%" style="overflow-x: visible">
-        <!--<mat-grid-tile colspan="3" rowspan="1" *ngIf="!isMobile"></mat-grid-tile>-->
-        <mat-grid-tile [colspan]="!isMobile ? 6 : 6" rowspan="1">
+        <mat-grid-tile colspan="6" rowspan="1">
             <div class="banner-container">
                 <span>
-                    <!--<img src="./assets/code.png"/>-->
                     <h1 class="banner-title pacifico">Web Developer<span class="accent">.</span></h1>
-                    <p class="banner-subtitle">Focused on <span class="accent">powerful</span> designs</p>
+                    <!--<p class="banner-subtitle">Focused on <span class="accent">powerful</span> designs</p>-->
                     <button mat-raised-button color="accent" class="loud-btn">
                         Get In Touch.
                     </button>
@@ -18,44 +16,133 @@
 <div class="container">
     <div class="content-strip">
         <h1 class="content-headline">Skills</h1>
-        <mat-grid-list cols="12" rowHeight="500px" style="overflow-x: visible">
-            <mat-grid-tile [colspan]="!isMobile ? 4 : 12" rowspan="1">
-                <img src="./assets/imgs/nodejs.png" alt="NodeJS" class="skill-img">
-                <p class="skill-title">
-                    Node<span class="nodejs-color">JS</span>
-                </p>
+        <mat-grid-list cols="12" rowHeight="400px" style="overflow-x: visible">
+            <mat-grid-tile [colspan]="!isMobile ? 2 : 12" rowspan="1">
+                <mat-card class="skill-card nodejs-theme">
+                    <img src="./assets/imgs/nodejs.png" alt="NodeJS" class="skill-img">
+                    <p class="skill-title">
+                        Node<span class="skill-color">JS</span>
+                    </p>
+                    <mat-card-content>
+                        <mat-icon svgIcon="star" aria-hidden="false" aria-label="star" class="skill-star"></mat-icon>
+                        <mat-icon svgIcon="star" aria-hidden="false" aria-label="star" class="skill-star"></mat-icon>
+                        <mat-icon svgIcon="star" aria-hidden="false" aria-label="star" class="skill-star"></mat-icon>
+                        <mat-icon svgIcon="star" aria-hidden="false" aria-label="star" class="skill-star"></mat-icon>
+                        <mat-icon svgIcon="star" aria-hidden="false" aria-label="star" class="skill-star"></mat-icon>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button mat-button class="skill-btn">MORE</button>
+                    </mat-card-actions>
+                </mat-card>
             </mat-grid-tile>
-            <mat-grid-tile [colspan]="!isMobile ? 4 : 12" rowspan="1">
-                <img src="./assets/imgs/typescript.png" alt="Typescript" class="skill-img">
-                <p class="skill-title">
-                    Type<span class="typescript-color">Script</span>
-                </p>
+            <mat-grid-tile [colspan]="!isMobile ? 2 : 12" rowspan="1">
+                <mat-card class="skill-card typescript-theme">
+                    <img src="./assets/imgs/typescript.png" alt="Typescript" class="skill-img">
+                    <p class="skill-title">
+                        Type<span class="skill-color">Script</span>
+                    </p>
+                    <mat-card-content>
+                        <mat-icon svgIcon="star" aria-hidden="false" aria-label="star" class="skill-star"></mat-icon>
+                        <mat-icon svgIcon="star" aria-hidden="false" aria-label="star" class="skill-star"></mat-icon>
+                        <mat-icon svgIcon="star" aria-hidden="false" aria-label="star" class="skill-star"></mat-icon>
+                        <mat-icon svgIcon="emptyStar" aria-hidden="false" aria-label="star" class="skill-star">
+                        </mat-icon>
+                        <mat-icon svgIcon="emptyStar" aria-hidden="false" aria-label="star" class="skill-star">
+                        </mat-icon>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button mat-button class="skill-btn">MORE</button>
+                    </mat-card-actions>
+                </mat-card>
             </mat-grid-tile>
-            <mat-grid-tile [colspan]="!isMobile ? 4 : 12" rowspan="1">
-                <img src="./assets/imgs/aws.png" alt="AWS" class="skill-img">
-                <p class="skill-title">
-                    Amazon<span class="aws-color"> Web Services</span>
-                </p>
+            <mat-grid-tile [colspan]="!isMobile ? 2 : 12" rowspan="1">
+                <mat-card class="skill-card aws-theme">
+                    <img src="./assets/imgs/aws.png" alt="AWS" class="skill-img">
+                    <p class="skill-title">
+                        Amazon<span class="skill-color"> Web Services</span>
+                    </p>
+                    <mat-card-content>
+                        <mat-icon svgIcon="star" aria-hidden="false" aria-label="star" class="skill-star"></mat-icon>
+                        <mat-icon svgIcon="star" aria-hidden="false" aria-label="star" class="skill-star"></mat-icon>
+                        <mat-icon svgIcon="star" aria-hidden="false" aria-label="star" class="skill-star"></mat-icon>
+                        <mat-icon svgIcon="star" aria-hidden="false" aria-label="star" class="skill-star"></mat-icon>
+                        <mat-icon svgIcon="emptyStar" aria-hidden="false" aria-label="star" class="skill-star">
+                        </mat-icon>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button mat-button class="skill-btn">MORE</button>
+                    </mat-card-actions>
+                </mat-card>
             </mat-grid-tile>
-            <mat-grid-tile [colspan]="!isMobile ? 4 : 12" rowspan="1">
-                <img src="./assets/imgs/csharp.png" alt="CSharp" class="skill-img">
-                <p class="skill-title">
-                    C<span class="csharp-color">#</span>
-                </p>
+            <mat-grid-tile [colspan]="!isMobile ? 2 : 12" rowspan="1">
+                <mat-card class="skill-card csharp-theme">
+                    <img src="./assets/imgs/csharp.png" alt="CSharp" class="skill-img">
+                    <p class="skill-title">
+                        C<span class="skill-color">#</span>
+                    </p>
+                    <mat-card-content>
+                        <mat-icon svgIcon="star" aria-hidden="false" aria-label="star" class="skill-star"></mat-icon>
+                        <mat-icon svgIcon="star" aria-hidden="false" aria-label="star" class="skill-star"></mat-icon>
+                        <mat-icon svgIcon="emptyStar" aria-hidden="false" aria-label="star" class="skill-star"></mat-icon>
+                        <mat-icon svgIcon="emptyStar" aria-hidden="false" aria-label="star" class="skill-star"></mat-icon>
+                        <mat-icon svgIcon="emptyStar" aria-hidden="false" aria-label="star" class="skill-star"></mat-icon>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button mat-button class="skill-btn">MORE</button>
+                    </mat-card-actions>
+                </mat-card>
             </mat-grid-tile>
-            <mat-grid-tile [colspan]="!isMobile ? 4 : 12" rowspan="1">
-                <img src="./assets/imgs/angular.png" alt="Angular" class="skill-img">
-                <p class="skill-title">
-                    Angular
-                </p>
+            <mat-grid-tile [colspan]="!isMobile ? 2 : 12" rowspan="1">
+                <mat-card class="skill-card angular-theme">
+                    <img src="./assets/imgs/angular.png" alt="Angular" class="skill-img">
+                    <p class="skill-title">
+                        Angular
+                    </p>
+                    <mat-card-content>
+                        <mat-icon svgIcon="star" aria-hidden="false" aria-label="star" class="skill-star"></mat-icon>
+                        <mat-icon svgIcon="star" aria-hidden="false" aria-label="star" class="skill-star"></mat-icon>
+                        <mat-icon svgIcon="star" aria-hidden="false" aria-label="star" class="skill-star"></mat-icon>
+                        <mat-icon svgIcon="star" aria-hidden="false" aria-label="star" class="skill-star"></mat-icon>
+                        <mat-icon svgIcon="emptyStar" aria-hidden="false" aria-label="star" class="skill-star"></mat-icon>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button mat-button class="skill-btn">MORE</button>
+                    </mat-card-actions>
+                </mat-card>
             </mat-grid-tile>
-            <mat-grid-tile [colspan]="!isMobile ? 4 : 12" rowspan="1">
-                <img src="./assets/imgs/ionic.png" alt="ionic" class="skill-img">
-                <p class="skill-title">
-                    Ionic <span class="ionic-color">Framework</span>
-                </p>
+            <mat-grid-tile [colspan]="!isMobile ? 2 : 12" rowspan="1">
+                <mat-card class="skill-card ionic-theme">
+                    <img src="./assets/imgs/ionic.png" alt="ionic" class="skill-img">
+                    <p class="skill-title">
+                        Ionic <span class="skill-color">Framework</span>
+                    </p>
+                    <mat-card-content>
+                        <mat-icon svgIcon="star" aria-hidden="false" aria-label="star" class="skill-star"></mat-icon>
+                        <mat-icon svgIcon="star" aria-hidden="false" aria-label="star" class="skill-star"></mat-icon>
+                        <mat-icon svgIcon="star" aria-hidden="false" aria-label="star" class="skill-star"></mat-icon>
+                        <mat-icon svgIcon="emptyStar" aria-hidden="false" aria-label="star" class="skill-star"></mat-icon>
+                        <mat-icon svgIcon="emptyStar" aria-hidden="false" aria-label="star" class="skill-star"></mat-icon>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button mat-button class="skill-btn">MORE</button>
+                    </mat-card-actions>
+                </mat-card>
             </mat-grid-tile>
         </mat-grid-list>
+    </div>
+</div>
+<div class="container true-black">
+    <div class="content">
+        <mat-grid-list cols="6" rowHeight="250px" style="overflow-x: visible">
+            <mat-grid-tile [colspan]="!isMobile ? 3 : 6" rowspan="1">
+                <h2 class="footer-headline">Contact</h2>
+                <div class="dash"></div>
+                <p class="footer-txt">wesley.young.portfolio@gmail.com</p>
+                <p class="footer-txt">435.229.8832</p>
+            </mat-grid-tile>
+            <mat-grid-tile [colspan]="!isMobile ? 3 : 6" rowspan="1">
 
+            </mat-grid-tile>
+        </mat-grid-list>
     </div>
 </div>

@@ -80,39 +80,23 @@ $portfolio-theme: mat-dark-theme($portfolio-primary, $portfolio-accent, $portfol
   font-family: SrcSansProLight !important;
 }
 
-.skill-card {
-  background-color: transparent !important;
-  height: 100%;
-  width: 100%;
+.footer-headline {
+  color: whitesmoke;
+  margin-bottom: 0;
+  font-size: 35px;
+  font-weight: 300;
+  font-family: SrcSansProLight !important;
 }
 
-.skill-card > img {
-  width: 400px !important;
+.footer-txt {
+  color: whitesmoke;
+  font-size: 20px;
+  font-weight: 300;
+  font-family: SrcSansProLight !important;
 }
 
 .skill-img {
-  width: 300px !important;
-}
-
-.skill-card > .mat-card-header {
-  text-align: center !important;
-}
-
-.skill-card > .mat-card-header > .mat-card-header-text {
-  width: 100%;
-}
-
-.loud-btn {
-  margin: 0 25% 0 25%;
-  height: 65px;
-  width: 100%;
-  font-family: pacifico !important;
-  font-size: 35px;
-}
-
-.white {
-  background-color: transparent !important;
-  color: white !important;
+  width: 100px !important;
 }
 
 .accent {
