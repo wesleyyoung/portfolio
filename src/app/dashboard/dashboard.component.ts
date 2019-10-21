@@ -175,7 +175,9 @@ export interface Molecule {
   y: number,
   x_mod: number,
   y_mod: number,
-  radius: number
+  radius: number,
+  bonded: boolean,
+  bond_color: string
 }
 
 export interface MolecularBond {
@@ -186,8 +188,30 @@ export interface MolecularBond {
 export class MoleculeField {
 
   private color = 'whitesmoke';
-  private bondColor = '#81c784';
+  private bondColor = 'whitesmoke';
   private bondThreshold = 85;
+  private bondColors = [
+    '#c62828',
+    '#ad1457',
+    '#6a1b9a',
+    '#4527a0',
+    '#283593',
+    '#1565c0',
+    '#0277bd',
+    '#00838f',
+    '#00695c',
+    '#2e7d32',
+    '#81c784',
+    '#4db6ac',
+    '#4dd0e1',
+    '#4fc3f7',
+    '#64b5f6',
+    '#7986cb',
+    '#9575cd',
+    '#ba68c8',
+    '#f06292',
+    '#e57373'
+  ];
 
   public molecules: Array<Molecule> = [];
   public bonds: Array<MolecularBond> = [];
@@ -203,7 +227,9 @@ export class MoleculeField {
         y: Math.floor((Math.random() * this.ctx.canvas.height) + 1),
         x_mod: modifiers[Math.floor((Math.random() * modifiers.length - 1))],
         y_mod: modifiers[Math.floor((Math.random() * modifiers.length - 1))],
-        radius: 4
+        radius: 4,
+        bonded: false,
+        bond_color: this.bondColors[Math.floor((Math.random() * this.bondColors.length - 1))]
       });
     }
   }
@@ -212,27 +238,29 @@ export class MoleculeField {
 
     this.update();
 
-    this.ctx.fillStyle = this.color;
-
-    for (var i = 0; i < this.molecules.length; i++) {
-      this.ctx.beginPath();
-      this.ctx.arc(this.molecules[i].x, this.molecules[i].y, this.molecules[i].radius, 0, 2 * Math.PI);
-      this.ctx.fill();
-    }
-
     this.ctx.strokeStyle = this.bondColor;
-    this.ctx.fillStyle = this.bondColor;
 
     for (var i = 0; i < this.bonds.length; i++) {
+      
       this.ctx.beginPath();
       this.ctx.moveTo(this.molecules[this.bonds[i].startIndex].x, this.molecules[this.bonds[i].startIndex].y);
       this.ctx.lineTo(this.molecules[this.bonds[i].endIndex].x, this.molecules[this.bonds[i].endIndex].y);
       this.ctx.stroke();
+
+      this.molecules[this.bonds[i].startIndex].bonded = true;
+      this.molecules[this.bonds[i].endIndex].bonded = true;
+    }
+
+    for (var i = 0; i < this.molecules.length; i++) {
+
+      if (this.molecules[i].bonded) {
+        this.ctx.fillStyle = this.molecules[i].bond_color;
+      } else {
+        this.ctx.fillStyle = this.color;
+      }
+
       this.ctx.beginPath();
-      this.ctx.arc(this.molecules[this.bonds[i].startIndex].x, this.molecules[this.bonds[i].startIndex].y, this.molecules[this.bonds[i].startIndex].radius, 0, 2 * Math.PI);
-      this.ctx.fill();
-      this.ctx.beginPath();
-      this.ctx.arc(this.molecules[this.bonds[i].endIndex].x, this.molecules[this.bonds[i].endIndex].y, this.molecules[this.bonds[i].endIndex].radius, 0, 2 * Math.PI);
+      this.ctx.arc(this.molecules[i].x, this.molecules[i].y, this.molecules[i].radius, 0, 2 * Math.PI);
       this.ctx.fill();
     }
   }
@@ -242,6 +270,8 @@ export class MoleculeField {
     this.bonds = [];
     let coords: Array<any> = [];
     for (var i = 0; i < this.molecules.length; i++) {
+
+      this.molecules[i].bonded = false;
 
       if (this.molecules[i].x >= this.ctx.canvas.width || this.molecules[i].x <= 0) {
         this.molecules[i].x_mod *= -1;
@@ -267,6 +297,7 @@ export class MoleculeField {
           }
         }
       }
+
       coords.push({
         x: this.molecules[i].x,
         y: this.molecules[i].y
