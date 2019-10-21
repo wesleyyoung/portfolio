@@ -22,7 +22,8 @@
 
 .banner {
     /*background-color: #303f9f;*/
-    background-image: url(../../assets/code_banner.webp);
+    /*background-color: #002171;*/
+    /*background-image: url(../../assets/code_banner.webp);*/
 }
 
 .banner-title {
@@ -86,14 +87,19 @@
 
 .skill-card {
     background-color: transparent !important;
-    height: 100%;
+    max-height: 100%;
+}
+
+.skill-card > .mat-card-content {
+    margin-bottom: 0 !important;
 }
 
 .skill-title {
     color: white;
-    height: 70px !important;
+    height: 72px !important;
     font-size: 32px;
     font-family: SrcSansProLight;
+    line-height: 35px;
 }
 
 .skill-card-left {
@@ -107,7 +113,7 @@
 .skill-btn {
     font-family: SrcSansPro;
     font-size: 20px;
-    width: 80%;
+    width: 60%;
     height: 50px;
 }
 
