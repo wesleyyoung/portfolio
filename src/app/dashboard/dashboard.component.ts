@@ -1,11 +1,15 @@
 import { Component, OnInit, ViewChild, ElementRef, NgZone } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
+import {
+  MatDialog,
+  MatDialogRef,
+  MAT_DIALOG_DATA
+} from '@angular/material';
 import { MatIconRegistry } from '@angular/material/icon';
 import { fromEvent, interval } from 'rxjs';
-import { switchMap, takeUntil, pairwise } from 'rxjs/operators';
 import { TimeInterval } from 'rxjs/internal/operators/timeInterval';
 import { ApiService } from '../api.service';
-import { SummaryResolver } from '@angular/compiler';
+import { ContactModalComponent } from '../contact-modal/contact-modal.component';
 
 export interface Skill {
   name: string;
@@ -27,6 +31,7 @@ export class DashboardComponent implements OnInit {
 
   public isMobile: boolean = this.api.isMobileWatcher;
   public isMedium: boolean = this.api.isMediumWatcher;
+
   public skills: Array<Skill> = [{
     name: 'Node',
     name_accent: 'JS',
@@ -116,6 +121,7 @@ export class DashboardComponent implements OnInit {
     private api: ApiService,
     private iconRegistry: MatIconRegistry,
     private sanitizer: DomSanitizer,
+    private dialog: MatDialog,
     private ngZone: NgZone
   ) {
 
@@ -132,9 +138,19 @@ export class DashboardComponent implements OnInit {
     });
   }
 
+  openContactModal(): void {
+
+    this.dialog.open(ContactModalComponent, {
+      panelClass: [
+        'contact-modal',
+        'dark-bg'
+      ]
+    });
+  }
+
   public draw_skill_2(): void {
 
-    const moleculeField: MoleculeField = new MoleculeField(this.ctx, 40);
+    const moleculeField: MoleculeField = new MoleculeField(this.ctx, 45);
 
     const runtime: RunTime = new RunTime(this.ctx, [
       moleculeField

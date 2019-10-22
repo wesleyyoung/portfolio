@@ -5,8 +5,13 @@ html, body {
     margin: 0;
     background-color: rgb(20, 20, 20) !important;
 }
+
 body { 
     font-family: Roboto, "Helvetica Neue", sans-serif; 
+}
+
+.dark-bg {
+  background-color: rgb(20, 20, 20) !important;
 }
 
 .pacifico {
@@ -22,54 +27,86 @@ body {
 }
 
 .content {
-    width: 100%;
-    align-self: center;
-    max-width: 1200px;
-    padding-top: 20px;
-    display: inline-block;
-    text-align: auto;
-    overflow: visible;
-  }
+  width: 100%;
+  align-self: center;
+  max-width: 1200px;
+  padding-top: 20px;
+  display: inline-block;
+  text-align: auto;
+  overflow: visible;
+}
 
-  .white {
-    background-color: whitesmoke;
-  }
+.white {
+  background-color: whitesmoke;
+}
 
-  .true-black {
-    background-color: black;
-  }
+.true-black {
+  background-color: black;
+}
 
-  .content-np {
-    width: 100%;
-    align-self: center;
-    max-width: 1200px;
-    display: inline-block;
-    text-align: auto;
-    overflow: visible;
-  }
+.content-np {
+  width: 100%;
+  align-self: center;
+  max-width: 1200px;
+  display: inline-block;
+  text-align: auto;
+  overflow: visible;
+}
   
-  .content-strip {
-    width: 100%;
-    align-self: center;
-    max-width: 1600px;
-    padding: 50px 0 50px 0;
-    display: inline-block;
-    text-align: auto;
-    overflow: hidden;
-  }
+.content-strip {
+  width: 100%;
+  align-self: center;
+  max-width: 1600px;
+  padding: 50px 0 50px 0;
+  display: inline-block;
+  text-align: auto;
+  overflow: hidden;
+}
 
 .container {
-    align-items: center;
-    align-content: center;
-    text-align: center;
-    width: 100%;
-    display: inline-block;
-  }
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+}
 
-  .full-height-container {
-    align-items: center;
-    align-content: center;
-    text-align: center;
-    width: 100%;
-    height: 100vh;
-  }
+.full-height-container {
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.contact-modal > .mat-dialog-container {
+  width: 100vw;
+  max-width: 1000px;
+  background-color: rgb(20, 20, 20);
+}
+  
+.contact-modal > .mat-dialog-container > app-contact-modal {
+  width: 100%;
+}
+
+.contact-left-pane-title {
+  text-align: center;
+  font-size: 90px;
+  font-family: pacifico;
+  color: whitesmoke;
+  font-weight: 100;
+  /*margin: 0 !important;*/
+  /*text-decoration: underline #81c784;*/
+}
+
+.contact-cta-btn {
+  width: 85%;
+  height: 50px;
+  font-size: 24px;
+  font-family: pacifico;
+}
+.contact-cancel-btn {
+  height: 50px;
+  font-size: 24px;
+  font-family: pacifico;
+}

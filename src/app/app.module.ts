@@ -44,6 +44,8 @@ import { MatTreeModule } from '@angular/material/tree';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { ResumeComponent } from './resume/resume.component';
+import { ContactModalComponent } from './contact-modal/contact-modal.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -51,7 +53,8 @@ import { ResumeComponent } from './resume/resume.component';
     DashboardComponent,
     AboutComponent,
     ContactComponent,
-    ResumeComponent
+    ResumeComponent,
+    ContactModalComponent
   ],
   imports: [
     BrowserModule,
@@ -92,9 +95,14 @@ import { ResumeComponent } from './resume/resume.component';
     MatToolbarModule,
     MatTooltipModule,
     MatTreeModule,
+    FormsModule,
+    ReactiveFormsModule,
     HttpClientModule
   ],
   providers: [],
+  entryComponents: [
+    ContactModalComponent
+  ],
   bootstrap: [
     AppComponent
   ]
