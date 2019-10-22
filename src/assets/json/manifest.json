@@ -1,0 +1,9 @@
+{
+    "short_name": "WesleyYoung",
+    "name": "Wesley Young's Portfolio",
+    "start_url": "/",
+    "background_color": "#141414",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#81c784"
+}
