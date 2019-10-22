@@ -236,7 +236,9 @@ export class MoleculeField {
     private ctx: CanvasRenderingContext2D,
     private count: number
   ) {
-    let modifiers = [-2, -1, -0.5, 0.5, 1, 2];
+
+    let modifiers = [-2, -1, -0.75, -0.5, -0.25, 0.25, 0.5, 0.75, 1, 2];
+
     for (var i = 0; i < this.count; i++) {
       this.molecules.push({
         x: Math.floor((Math.random() * this.ctx.canvas.width) + 1),
@@ -245,7 +247,8 @@ export class MoleculeField {
         y_mod: modifiers[Math.floor((Math.random() * modifiers.length - 1))],
         radius: 4,
         bonded: false,
-        bond_color: this.bondColors[Math.floor((Math.random() * this.bondColors.length - 1))]
+        bond_color: 'rgb(' + Math.floor((Math.random() * 255) + 80) + ',' + ((Math.random() * 255) + 80) + ',' + ((Math.random() * 255) + 80) + ')'
+        // bond_color: this.bondColors[Math.floor((Math.random() * this.bondColors.length - 1))]
       });
     }
   }
@@ -257,7 +260,7 @@ export class MoleculeField {
     this.ctx.strokeStyle = this.bondColor;
 
     for (var i = 0; i < this.bonds.length; i++) {
-      
+
       this.ctx.beginPath();
       this.ctx.moveTo(this.molecules[this.bonds[i].startIndex].x, this.molecules[this.bonds[i].startIndex].y);
       this.ctx.lineTo(this.molecules[this.bonds[i].endIndex].x, this.molecules[this.bonds[i].endIndex].y);
@@ -289,10 +292,18 @@ export class MoleculeField {
 
       this.molecules[i].bonded = false;
 
-      if (this.molecules[i].x >= this.ctx.canvas.width || this.molecules[i].x <= 0) {
+      if (this.molecules[i].x > this.ctx.canvas.width) {
+        this.molecules[i].x = this.ctx.canvas.width;
+        this.molecules[i].x_mod *= -1;
+      } else if (this.molecules[i].x < 0) {
+        this.molecules[i].x = 0;
         this.molecules[i].x_mod *= -1;
       }
-      if (this.molecules[i].y >= this.ctx.canvas.height || this.molecules[i].y <= 0) {
+      if (this.molecules[i].y > this.ctx.canvas.height) {
+        this.molecules[i].y = this.ctx.canvas.height;
+        this.molecules[i].y_mod *= -1;
+      } else if (this.molecules[i].y < 0) {
+        this.molecules[i].y = 0;
         this.molecules[i].y_mod *= -1;
       }
 
