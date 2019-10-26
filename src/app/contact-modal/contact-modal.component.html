@@ -6,12 +6,12 @@
             </p>
         </mat-grid-tile>
         <mat-grid-tile [colspan]="isMobile || isMedium ? 2 : 1" rowspan="1">
-            <form>
+            <div>
                 <p></p>
                 <div>
                     <mat-form-field appearance="legacy" color="accent" style="width: 100%;">
                         <mat-label>Name</mat-label>
-                        <input matInput [formControl]="requiredFormControl">
+                        <input matInput [formControl]="requiredFormControl" [(ngModel)]="thisForm.name">
                         <mat-icon matSuffix color="accent">account_circle</mat-icon>
                         <mat-error *ngIf="requiredFormControl.hasError('required')">
                             Name is <strong>required</strong>
@@ -21,7 +21,7 @@
                 <div>
                     <mat-form-field appearance="legacy" color="accent" style="width: 100%;">
                         <mat-label>Email</mat-label>
-                        <input matInput [formControl]="emailFormControl">
+                        <input matInput [formControl]="emailFormControl" [(ngModel)]="thisForm.email">
                         <mat-icon matSuffix color="accent">email</mat-icon>
                         <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
                             Please enter a valid email address
@@ -35,7 +35,7 @@
                     <mat-form-field appearance="legacy" color="accent" style="width: 100%;">
                         <mat-label>Phone</mat-label>
                         <span matPrefix>+1 &nbsp;</span>
-                        <input matInput [formControl]="phoneFormControl">
+                        <input matInput [formControl]="phoneFormControl" [(ngModel)]="thisForm.phone">
                         <mat-icon matSuffix color="accent">phone</mat-icon>
                         <mat-error *ngIf="phoneFormControl.hasError('required')">
                             A phone number is <strong>required</strong>
@@ -49,15 +49,15 @@
                     <mat-form-field appearance="outline" color="accent" style="width: 100%;">
                         <mat-label>Message</mat-label>
                         <textarea matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="2"
-                            cdkAutosizeMaxRows="2">
+                            cdkAutosizeMaxRows="2" [(ngModel)]="thisForm.message">
                         </textarea>
                         <mat-hint>Optional</mat-hint>
                     </mat-form-field>
                 </p>
-            </form>
+            </div>
             <p>
                 <mat-dialog-actions align="center">
-                    <button mat-raised-button color="accent" class="contact-cta-btn">Send</button>
+                    <button mat-raised-button color="accent" class="contact-cta-btn" (click)="contactMe()">Send</button>
                 </mat-dialog-actions>
             </p>
             <p>

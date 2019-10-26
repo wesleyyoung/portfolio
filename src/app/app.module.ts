@@ -41,10 +41,14 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
+
+
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { ResumeComponent } from './resume/resume.component';
-import { ContactModalComponent } from './contact-modal/contact-modal.component';
+import { 
+  ContactModalComponent,
+  SuccessModal } from './contact-modal/contact-modal.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
@@ -54,7 +58,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AboutComponent,
     ContactComponent,
     ResumeComponent,
-    ContactModalComponent
+    ContactModalComponent,
+    SuccessModal
   ],
   imports: [
     BrowserModule,
@@ -101,7 +106,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   ],
   providers: [],
   entryComponents: [
-    ContactModalComponent
+    ContactModalComponent,
+    SuccessModal
   ],
   bootstrap: [
     AppComponent

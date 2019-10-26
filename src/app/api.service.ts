@@ -1,5 +1,5 @@
-import { Injectable } from '@angular/core';
 import { 
+  Injectable,
   Component,
   OnInit,
   Inject,
@@ -7,8 +7,20 @@ import {
   NgZone ,
   ViewChild
 } from '@angular/core';
-import { Subject } from 'rxjs';
+import { 
+  Subject,
+  Observable
+ } from 'rxjs';
 import { DOCUMENT } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
+
+export interface ContactForm {
+  name: string,
+  email: string,
+  phone: string,
+  message: string;
+  sent: Date
+}
 
 @Injectable({
   providedIn: 'root'
@@ -23,12 +35,26 @@ export class ApiService {
   public isMediumWatcher: boolean = !this.isMobileWatcher && window.innerWidth <= this.mediumWidthTrigger;
   public isMedium = new Subject<boolean>();
 
-  constructor() {
+  constructor(
+    private http: HttpClient
+  ) {
     window.addEventListener('resize', ev => {
       this.isMobileWatcher = window.innerWidth <= this.mobileWidthTrigger || window.innerHeight <= this.mobileHeightTrigger;
       this.isMediumWatcher = !this.isMobileWatcher && window.innerWidth < this.mediumWidthTrigger;
       this.isMobile.next(this.isMobileWatcher);
       this.isMedium.next(this.isMediumWatcher);
     });
+  }
+
+  public contactMe(form: ContactForm, success: Function, err: Function): void {
+    this.http.post('http://localhost:8080/contact', form)
+      .subscribe(
+        data => {
+          success(data);
+        },
+        error  => {
+          err(error);
+        }
+      )
   }
 }
