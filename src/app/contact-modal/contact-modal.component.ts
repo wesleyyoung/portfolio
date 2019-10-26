@@ -33,7 +33,7 @@ export class ContactModalComponent implements OnInit {
   public isMobile: boolean = this.api.isMobileWatcher;
   public isMedium: boolean = this.api.isMediumWatcher;
 
-  private thisForm: ContactForm = {
+  public thisForm: ContactForm = {
     name: '',
     email: '',
     phone: '',

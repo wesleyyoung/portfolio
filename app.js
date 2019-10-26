@@ -10,7 +10,7 @@
         server = require('http').Server(app),
         nodemailer = require('nodemailer');
 
-    /*const 
+    const 
         privatekey = fs.readFileSync('/etc/letsencrypt/live/wesprodev.com/privkey.pem', 'utf8'),
         certificate = fs.readFileSync('/etc/letsencrypt/live/wesprodev.com/cert.pem', 'utf8'),
         ca = fs.readFileSync('/etc/letsencrypt/live/weprodev.com/fullchain.pem', 'utf8'),
@@ -18,7 +18,7 @@
             key: privatekey,
             cert: certificate,
             ca: ca
-        };*/
+        };
 
     app.use(bodyParser.urlencoded({ extended: true }));
     app.use(bodyParser.json());
@@ -26,7 +26,7 @@
     app.use('/', express.static(__dirname + '/dist/portfolio'));
     app.use('/node_modules', express.static(__dirname + '/node_modules'));
 
-    app.set('PORT', process.env.PORT || 8080);
+    app.set('PORT', process.env.PORT || 80);
     app.set('SECURE_PORT', process.env.SECURE_PORT || 443);
 
     app.post('/contact', (req, res) => {
@@ -68,8 +68,8 @@ At: ${contactor.sent}`
         console.log(`Listening on port ${app.get('PORT')}...`);
     });
 
-    //https.createServer(credentials, app).listen(app.get('SECURE_PORT'), () => {
-    //    console.log(`Listening on secure port ${app.get('SECURE_PORT')}...`);
-    //});
+    https.createServer(credentials, app).listen(app.get('SECURE_PORT'), () => {
+        console.log(`Listening on secure port ${app.get('SECURE_PORT')}...`);
+    });
 
 })();
