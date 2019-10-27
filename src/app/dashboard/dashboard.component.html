@@ -2,25 +2,63 @@
 <div class="full-height-container banner banner-section">
     <mat-grid-list cols="6" rowHeight="100%" style="overflow-x: visible">
         <mat-grid-tile colspan="6" rowspan="1">
-            <div class="banner-container">
+            <div class="banner-container" [class.banner-container-mobile]="isMobile">
                 <div>
                     <img src="./assets/imgs/profile.png" class="banner-img" [class.banner-img-mobile]="isMobile">
-                    <h1 class="banner-title" [class.banner-title-mobile]="isMobile">
-                        Web Developer<span class="accent">.</span>
-                    </h1>
-                    <!--<p class="banner-subtitle">Focused on <span class="accent">powerful</span> designs</p>-->
-                    <button mat-raised-button color="accent" class="loud-btn" [class.loud-btn-mobile]="isMobile" (click)="openContactModal()">
+                    <svg class="intro" [class.go]="intro">
+                        <text text-anchor="start" x="0" y="100" class="text text-stroke" clip-path="url(#text)"
+                            [class.banner-title-mobile]="isMobile">
+                            Web Developer.</text>
+                        <defs>
+                            <clipPath id="text">
+                                <text text-anchor="start" x="0" y="100" class="text"
+                                    [class.banner-title-mobile]="isMobile">Web Developer.</text>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <button mat-raised-button color="accent" class="loud-btn" [class.loud-btn-mobile]="isMobile"
+                        [class.loud-btn-show]="introBtn" (click)="openContactModal()">
                         Get In Touch.
                     </button>
+                    <!--<img src="./assets/imgs/profile.png" class="banner-img"
+                            [class.banner-img-mobile]="isMobile">
+                        <h1 class="banner-title" [class.banner-title-mobile]="isMobile">
+                            Web Developer<span class="accent">.</span>
+                        </h1>
+                        <button mat-raised-button color="accent" class="loud-btn" [class.loud-btn-mobile]="isMobile"
+                            (click)="openContactModal()">
+                            Get In Touch.
+                        </button>-->
                 </div>
             </div>
         </mat-grid-tile>
     </mat-grid-list>
 </div>
-<div class="container">
-    <div class="content-strip">
-        <h1 class="content-headline">About Me</h1>
-    </div>
+<div class="full-height-container">
+    <mat-grid-list cols="2" rowHeight="100%" style="overflow-x: visible" gutterSize="0">
+        <mat-grid-tile [colspan]="isMedium || isMobile ? 2 : 1" rowspan="1" class="accent-bg centered-content-container">
+            <div>
+                <p class="about-me-headline">
+                    Wesley Young
+                </p>
+                <p class="about-me-txt">
+                    Is a full-stack developer currently living in Saint George, Ut. He also has experience in network
+                    administration, home automation, and high-end residential audio-visual systems.
+                </p>
+                <p class="about-me-txt">
+                    Currently looking for work all over the U.S.
+                </p>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="1" rowspan="1" class="centered-content-container" *ngIf="!isMedium && !isMobile">
+            <div>
+                <div>
+                    <h1 class="modern-title">ABOUT ME<span class="accent">.</span></h1>
+                </div>
+            </div>
+        </mat-grid-tile>
+    </mat-grid-list>
+
 </div>
 <div class="container">
     <div class="content-strip">
@@ -52,4 +90,3 @@
         </mat-grid-list>
     </div>
 </div>
-<!--<canvas class="full-height-container" #canvas></canvas>-->

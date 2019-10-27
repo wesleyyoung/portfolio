@@ -23,7 +23,7 @@ export interface Skill {
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: [
-    './dashboard.component.css',
+    './dashboard.component.scss',
     '../../assets/fonts/custom-fonts.css'
   ]
 })
@@ -115,6 +115,9 @@ export class DashboardComponent implements OnInit {
 
   @ViewChild('canvas', { static: true }) canvas: ElementRef<HTMLCanvasElement>;
 
+  private intro: Boolean = false;
+  private introBtn: Boolean = false;
+
   private ctx: CanvasRenderingContext2D;
 
   constructor(
@@ -182,6 +185,12 @@ export class DashboardComponent implements OnInit {
     });
 
     this.draw_skill_2();
+
+    this.intro = true;
+
+    setTimeout(() => {
+      this.introBtn = true;
+    }, 1500);
   }
 
 }

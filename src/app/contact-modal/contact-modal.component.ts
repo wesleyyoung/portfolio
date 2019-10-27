@@ -65,21 +65,27 @@ export class ContactModalComponent implements OnInit {
   ]);
 
   contactMe(): void {
-    this.api.contactMe(
-      this.thisForm,
-      data => {
-        let dialogRef = this.dialog.open(SuccessModal, {
-          panelClass: [
-            'dark-bg'
-          ]
+    
+    if (this.thisForm.name != '' &&
+      this.thisForm.email != '' &&
+      this.thisForm.phone != '') {
+
+      this.api.contactMe(
+        this.thisForm,
+        data => {
+          let dialogRef = this.dialog.open(SuccessModal, {
+            panelClass: [
+              'dark-bg'
+            ]
+          });
+          dialogRef.afterClosed().subscribe(res => {
+            this.onNoClick();
+          });
+          console.log(data);
+        }, err => {
+          console.log(err);
         });
-        dialogRef.afterClosed().subscribe(res => {
-          this.onNoClick();
-        });
-        console.log(data);
-      }, err => {
-        console.log(err);
-      });
+    }
   }
 
   triggerResize() {

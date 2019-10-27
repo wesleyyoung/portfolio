@@ -18,3 +18,11 @@
     font-family: SrcSansProExtraLight;
     src: url(./SourceSansPro-ExtraLight.ttf) format("truetype");
 }
+@font-face {
+    font-family: Staatliches;
+    src: url(./Staatliches-Regular.ttf) format("truetype");
+}
+@font-face {
+    font-family: AbrilFatfaceRegular;
+    src: url(./AbrilFatface-Regular.ttf) format("truetype");
+}

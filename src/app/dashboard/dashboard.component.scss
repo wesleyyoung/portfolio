@@ -1,23 +1,35 @@
 
 .loud-btn {
     z-index: 0;
-    height: 65px;
+    height: 0;
     width: 100%;
+    opacity: 0;
+    color: transparent;
     font-family: pacifico !important;
     font-size: 35px;
-    border-radius: 0 0 50px 50px !important;
-    bottom: 30px;
+    border-radius: 50px 50px 50px 50px;
     padding-bottom: 10px !important;
     text-decoration: none;
+    bottom: 122px;
+    transform: translateY(-75px);
+    transition: all 1s ease-in-out;
 }
 .loud-btn-mobile {
     font-size: 30px !important;
-    bottom: 22px !important;
+    bottom: 122px !important;
+    max-width: 375px !important;
 }
 .loud-btn:hover {
-    transition: all ease 1s !important;
     text-decoration: underline;
     text-decoration-color: black;
+}
+
+.loud-btn-show {
+    height: 65px;
+    color: rgb(20, 20, 20);
+    border-radius: 0 0 50px 50px !important;
+    transform: translateY(0%);
+    opacity: 1;
 }
 
 .banner {
@@ -63,17 +75,26 @@
     vertical-align: middle;
     display: inline-block;
     line-height: normal;
+    width: 100%;
+    max-width: 515px;
+}
+
+.banner-container-mobile > div {
+    max-width: 375px !important;
 }
 
 .banner-img {
     width: 300px;
     height: 300px;
     border-radius: 100%;
+    position: relative;
+    margin-bottom: 50px;
 }
 
 .banner-img-mobile {
     width: 200px;
     height: 200px;
+    
 }
 
 .banner-section {
@@ -126,3 +147,79 @@
 .dark-bg {
     background-color: rgb(20, 20, 20) !important;
 }
+
+.accent-bg {
+    background-color: #81c784;
+}
+
+.modern-title {
+    /*font-family: Staatliches;*/
+    font-family: AbrilFatfaceRegular;
+    text-transform: capitalize;
+    color: whitesmoke;
+    line-height: 220px;
+    letter-spacing: 10px;
+    text-decoration: underline #81c784;
+    text-align: left;
+    width: 100%;
+    max-width: 550px;
+    word-wrap: break-word;
+    font-size: 220px;
+}
+
+.about-me-headline {
+    color: whitesmoke;
+    font-size: 30px;
+    font-family: Staatliches;
+}
+
+.about-me-txt {
+    color: black;
+    font-size: 25px;
+    font-family: SrcSansPro;
+    padding: 0 75px 0 75px;
+}
+
+/***
+    CSS Example
+***/
+
+svg.intro {
+    position: relative;
+    transform: translate(0%, -50%);
+    pointer-events: none !important;
+    text-align: center;
+    width: 100%;
+    z-index: 10;
+
+    .text { 
+      display: none !important;
+    }
+
+    &.go {
+
+      .text {
+        font-family: pacifico;
+        font-size: 75px;
+        font-weight: 100;
+        display: inline-block !important;
+      } 
+
+      .text-stroke {
+        fill: none;
+        stroke: whitesmoke;
+        stroke-width: 15;
+        stroke-dashoffset: -600;
+        stroke-dasharray: 600;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        animation: dash 2s ease-in-out forwards;
+      }
+    }
+  }
+  
+  @keyframes dash {
+    100% {
+        stroke-dashoffset: 0;
+    }
+  }

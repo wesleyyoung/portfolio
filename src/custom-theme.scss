@@ -109,6 +109,25 @@ $portfolio-theme: mat-dark-theme($portfolio-primary, $portfolio-accent, $portfol
   height: 2px;
 }
 
+.dark-dash {
+  border-bottom: 2px solid rgb(20, 20, 20); 
+  margin: 0 25% 0 25%; 
+  height: 2px;
+}
+
 .pacifico {
   font-family: 'Pacifico' !important;
+}
+
+.centered-content-container {
+  width: 100%;
+  height: 100%;
+  line-height: 100vh;
+}
+
+.centered-content-container > .mat-figure > div {
+  vertical-align: middle;
+  display: inline-block;
+  line-height: normal;
+  width: 100%;
 }

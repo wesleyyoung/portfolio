@@ -47,7 +47,7 @@ export class ApiService {
   }
 
   public contactMe(form: ContactForm, success: Function, err: Function): void {
-    this.http.post('http://wesprodev.com/contact', form)
+    this.http.post('https://wesprodev.com/contact', form)
       .subscribe(
         data => {
           success(data);
