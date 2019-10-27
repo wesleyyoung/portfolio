@@ -115,8 +115,8 @@ export class DashboardComponent implements OnInit {
 
   @ViewChild('canvas', { static: true }) canvas: ElementRef<HTMLCanvasElement>;
 
-  private intro: Boolean = false;
-  private introBtn: Boolean = false;
+  public intro: Boolean = false;
+  public introBtn: Boolean = false;
 
   private ctx: CanvasRenderingContext2D;
 
