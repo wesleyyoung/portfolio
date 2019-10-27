@@ -113,7 +113,7 @@ export class DashboardComponent implements OnInit {
   public title: any = this.titles[this.titleIndex];
   public titleChange;
 
-  @ViewChild('canvas', { static: true }) canvas: ElementRef<HTMLCanvasElement>;
+  @ViewChild('molecularBg', { static: true }) canvas: ElementRef<HTMLCanvasElement>;
 
   public intro: Boolean = false;
   public introBtn: Boolean = false;

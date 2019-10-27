@@ -72,12 +72,20 @@ $portfolio-theme: mat-dark-theme($portfolio-primary, $portfolio-accent, $portfol
 
 @include angular-material-theme($portfolio-theme);
 
+.dark-bg {
+  background-color: rgb(20, 20, 20) !important;
+}
+
 .content-headline {
   color: white;
-  margin-bottom: 50px;
+  margin-bottom: 0 !important;
   font-size: 60px;
   font-weight: 300;
   font-family: SrcSansProLight !important;
+}
+
+.footer {
+  z-index: 100;
 }
 
 .footer-headline {

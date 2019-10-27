@@ -12,31 +12,31 @@
     </button>
 </mat-toolbar>
 <router-outlet></router-outlet>
-<div class="container true-black">
-        <div class="content">
-            <mat-grid-list cols="6" rowHeight="250px" style="overflow-x: visible">
-                <mat-grid-tile [colspan]="!isMobile ? 3 : 6" rowspan="1">
-                    <h2 class="footer-headline">Contact</h2>
-                    <div class="dash"></div>
-                    <p class="footer-txt">wesley.young.portfolio@gmail.com</p>
-                    <p class="footer-txt">435.229.8832</p>
-                    <button mat-raised-button color="accent">Get In Touch</button>
-                </mat-grid-tile>
-                <mat-grid-tile [colspan]="!isMobile ? 3 : 6" rowspan="1">
-                    <h2 class="footer-headline">Site Map</h2>
-                    <div class="dash"></div>
-                    <p style="text-align: center;">
-                        <button mat-button color="accent" routerLink="/" style="padding: 0 25% 0 25%;">
-                            HOME
-                        </button>
-                        <button mat-button color="accent" routerLink="about" style="padding: 0 25% 0 25%;">
-                            ABOUT
-                        </button>
-                        <button mat-button color="accent" style="padding: 0 25% 0 25%;">
-                            CONTACT
-                        </button>
-                    </p>
-                </mat-grid-tile>
-            </mat-grid-list>
-        </div>
+<div class="container true-black footer">
+    <div class="content">
+        <mat-grid-list cols="6" rowHeight="250px" style="overflow-x: visible">
+            <mat-grid-tile [colspan]="!isMobile ? 3 : 6" rowspan="1">
+                <h2 class="footer-headline">Contact</h2>
+                <div class="dash"></div>
+                <p class="footer-txt">wesley.young.portfolio@gmail.com</p>
+                <p class="footer-txt">435.229.8832</p>
+                <button mat-raised-button color="accent">Get In Touch</button>
+            </mat-grid-tile>
+            <mat-grid-tile [colspan]="!isMobile ? 3 : 6" rowspan="1">
+                <h2 class="footer-headline">Site Map</h2>
+                <div class="dash"></div>
+                <p style="text-align: center;">
+                    <button mat-button color="accent" routerLink="/" style="padding: 0 25% 0 25%;">
+                        HOME
+                    </button>
+                    <button mat-button color="accent" routerLink="about" style="padding: 0 25% 0 25%;">
+                        ABOUT
+                    </button>
+                    <button mat-button color="accent" style="padding: 0 25% 0 25%;">
+                        CONTACT
+                    </button>
+                </p>
+            </mat-grid-tile>
+        </mat-grid-list>
     </div>
+</div>
