@@ -35,61 +35,61 @@ export class DashboardComponent implements OnInit {
   public skills: Array<Skill> = [{
     name: 'Node',
     name_accent: 'JS',
-    img: './assets/imgs/nodejs.png',
+    img: './assets/imgs/nodejs.webp',
     color: '#81cf08',
     rating: 5
   }, {
     name: 'Type',
     name_accent: 'Script',
-    img: './assets/imgs/typescript.png',
+    img: './assets/imgs/typescript.webp',
     color: '#007acc',
     rating: 3
   }, {
     name: 'Amazon ',
     name_accent: 'Web Services',
-    img: './assets/imgs/aws.png',
+    img: './assets/imgs/aws.webp',
     color: '#ff9900',
     rating: 4
   }, {
     name: 'C',
     name_accent: '#',
-    img: './assets/imgs/csharp.png',
+    img: './assets/imgs/csharp.webp',
     color: '#953dac',
     rating: 2
   }, {
     name: 'Angular',
     name_accent: '',
-    img: './assets/imgs/angular.png',
+    img: './assets/imgs/angular.webp',
     color: '#dd0031',
     rating: 4
   }, {
     name: 'Ionic ',
     name_accent: 'Framework',
-    img: './assets/imgs/ionic.png',
+    img: './assets/imgs/ionic.webp',
     color: '#008bff',
     rating: 3
   }, {
     name: 'HTML',
     name_accent: '5',
-    img: './assets/imgs/html5.png',
+    img: './assets/imgs/html5.webp',
     color: '#ff6d00',
     rating: 5
   }, {
     name: 'Python',
     name_accent: '',
-    img: './assets/imgs/python.png',
+    img: './assets/imgs/python.webp',
     color: '#ffd747',
     rating: 2
   }, {
     name: 'Mongo',
     name_accent: 'DB',
-    img: './assets/imgs/mongodb.png',
+    img: './assets/imgs/mongodb.webp',
     color: '#81c564',
     rating: 3
   }, {
     name: 'Linux',
     name_accent: '',
-    img: './assets/imgs/linux.png',
+    img: './assets/imgs/linux.webp',
     color: '#f79c3d',
     rating: 4
   }
@@ -215,29 +215,6 @@ export class MoleculeField {
   private color = 'whitesmoke';
   private bondColor = 'whitesmoke';
   private bondThreshold = 85;
-  private bondColors = [
-    '#c62828',
-    '#ad1457',
-    '#6a1b9a',
-    '#4527a0',
-    '#283593',
-    '#1565c0',
-    '#0277bd',
-    '#00838f',
-    '#00695c',
-    '#2e7d32',
-    '#81c784',
-    '#4db6ac',
-    '#4dd0e1',
-    '#4fc3f7',
-    '#64b5f6',
-    '#7986cb',
-    '#9575cd',
-    '#ba68c8',
-    '#f06292',
-    '#e57373'
-  ];
-
   public molecules: Array<Molecule> = [];
   public bonds: Array<MolecularBond> = [];
 
@@ -257,7 +234,6 @@ export class MoleculeField {
         radius: 4,
         bonded: false,
         bond_color: 'rgb(' + Math.floor((Math.random() * 255) + 80) + ',' + ((Math.random() * 255) + 80) + ',' + ((Math.random() * 255) + 80) + ')'
-        // bond_color: this.bondColors[Math.floor((Math.random() * this.bondColors.length - 1))]
       });
     }
   }
