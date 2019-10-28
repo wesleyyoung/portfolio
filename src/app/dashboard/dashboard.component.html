@@ -1,5 +1,5 @@
 <canvas class="molecular-field-bg" #molecularBg></canvas>
-<div class="full-height-container banner banner-section">
+<div class="full-height-container banner banner-section dark-bg">
     <mat-grid-list cols="6" rowHeight="100%" style="overflow-x: visible">
         <mat-grid-tile colspan="6" rowspan="1">
             <div class="banner-container" [class.banner-container-mobile]="isMobile">
@@ -16,7 +16,7 @@
                             </clipPath>
                         </defs>
                     </svg>
-                    <button mat-raised-button color="accent" class="loud-btn" [class.loud-btn-mobile]="isMobile"
+                    <button mat-raised-button color="warn" class="loud-btn" [class.loud-btn-mobile]="isMobile"
                         [class.loud-btn-show]="introBtn" (click)="openContactModal()">
                         Get In Touch.
                     </button>
@@ -25,8 +25,7 @@
         </mat-grid-tile>
     </mat-grid-list>
 </div>
-<div class="pop-bg" style="height: 5px;"></div>
-<div class="accent-bg" style="height: 5px;"></div>
+<div class="warn-bg" style="height: 5px;"></div>
 <div class="container dark-bg">
     <div class="content-strip">
         <h1 class="content-headline">Skills</h1>
@@ -62,32 +61,34 @@
     </div>
 </div>
 <div class="full-height-container">
-    <mat-grid-list cols="2" rowHeight="100%" style="overflow-x: visible" gutterSize="0">
-        <mat-grid-tile [colspan]="isMedium || isMobile ? 2 : 1" rowspan="1"
+    <mat-grid-list cols="12" rowHeight="100%" style="overflow-x: visible" gutterSize="0">
+        <mat-grid-tile [colspan]="isMedium || isMobile ? 12 : 7" rowspan="1"
             class="accent-bg centered-content-container">
             <div class="about-container">
                 <p class="about-me-headline">
                     Wesley Young
                 </p>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 10" style="width: 150px; height: 20px;">
-                    <polyline [attr.points]="squigglePoints.join(' ')" class="pop-squiggle">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 10" style="width: 75px; height: 10px;">
+                    <polyline [attr.points]="squigglePoints.join(' ')" class="primary-squiggle">
                     </polyline>
                 </svg>
                 <p class="about-me-txt">
                     Is a full-stack developer currently living in Saint George, UT. He also has experience in network
-                    administration, pay-per-click marketing, home automation, and high-end residential audio-visual systems.
+                    administration, pay-per-click marketing, home automation, and high-end residential audio-visual
+                    systems.
                 </p>
                 <!--<p class="about-me-txt">
                     Currently looking for work all over the U.S.
                 </p>-->
             </div>
         </mat-grid-tile>
-        <mat-grid-tile colspan="1" rowspan="1" class="centered-content-container" *ngIf="!isMedium && !isMobile">
-            <div>
-                <div>
-                    <h1 class="modern-title">ABOUT ME<span class="pop">.</span></h1>
-                </div>
-            </div>
+        <mat-grid-tile colspan="5" rowspan="1" class="centered-content-container dark-bg"
+            *ngIf="!isMedium && !isMobile" style="background-image: url(./assets/imgs/stg.webp); background-size: cover;">
+            
+                <!--<div>
+                    <h1 class="modern-title">ABOUT ME<span class="warn">.</span></h1>
+                </div>-->
+          
         </mat-grid-tile>
     </mat-grid-list>
 </div>

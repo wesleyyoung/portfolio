@@ -119,10 +119,6 @@ $portfolio-theme: mat-dark-theme($portfolio-primary, $portfolio-accent, $portfol
 
 @include angular-material-theme($portfolio-theme);
 
-.dark-bg {
-  background-color: rgb(20, 20, 20) !important;
-}
-
 .content-headline {
   color: white;
   margin-bottom: 0 !important;
@@ -154,8 +150,16 @@ $portfolio-theme: mat-dark-theme($portfolio-primary, $portfolio-accent, $portfol
   width: 100px !important;
 }
 
+.primary {
+  color: $primary-color !important;
+}
+
 .accent {
   color: $accent-color !important;
+}
+
+.warn {
+  color: $warn-color !important;
 }
 
 .pop {

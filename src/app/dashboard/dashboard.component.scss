@@ -170,9 +170,10 @@
 
 .modern-title {
     /*font-family: Staatliches;*/
+    /*color: whitesmoke;*/
     font-family: AbrilFatfaceRegular;
-    text-transform: capitalize;
     color: whitesmoke;
+    text-transform: capitalize;
     line-height: 220px;
     letter-spacing: 10px;
     text-decoration: underline $accent-color;
@@ -185,20 +186,24 @@
 
 .about-container {
     transition: all .5s ease-in-out;
+    text-align: left;
+    padding: 0 80px 0 80px;
+    width: auto !important;
+    max-width: 700px;
 }
 
 .about-me-headline {
     color: whitesmoke;
     font-size: 30px;
-    font-family: Staatliches;
+    font-family: pacifico;
     margin-bottom: 10px !important;
 }
 
 .about-me-txt {
     color: black;
-    font-size: 25px;
+    font-size: 20px;
     font-family: SrcSansPro;
-    padding: 0 75px 0 75px;
+    text-align: left;
 }
 
 .skew-left {
