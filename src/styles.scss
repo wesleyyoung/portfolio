@@ -16,6 +16,14 @@ body {
   background-color: rgb(20, 20, 20) !important;
 }
 
+.accent-dark-bg {
+  background-image: linear-gradient($accent-color, rgb(20, 20, 20));
+}
+
+.primary-accent-bg {
+  background-image: linear-gradient(right, $primary-color, $accent-color);
+}
+
 .pacifico {
     font-family: 'Pacifico', cursive !important;
 }

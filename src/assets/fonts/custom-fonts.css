@@ -26,3 +26,7 @@
     font-family: AbrilFatfaceRegular;
     src: url(./AbrilFatface-Regular.ttf) format("truetype");
 }
+@font-face {
+    font-family: RubikBold;
+    src: url(./Rubik-Bold.ttf) format("truetype");
+}
