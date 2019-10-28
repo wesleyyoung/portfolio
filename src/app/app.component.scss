@@ -1,3 +1,5 @@
+@import '../custom-theme.scss';
+
 .toolbar {
     z-index: 500;
     position: fixed;
@@ -11,9 +13,5 @@
 .my-name {
     font-family: pacifico;
     text-decoration: underline;
-    text-decoration-color: #81c784;
+    text-decoration-color: $accent-color;
 }
-
-/*button {
-    font-family: 'Pacifico' !important;
-}*/

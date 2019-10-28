@@ -20,29 +20,21 @@
                         [class.loud-btn-show]="introBtn" (click)="openContactModal()">
                         Get In Touch.
                     </button>
-                    <!--<img src="./assets/imgs/profile.png" class="banner-img"
-                            [class.banner-img-mobile]="isMobile">
-                        <h1 class="banner-title" [class.banner-title-mobile]="isMobile">
-                            Web Developer<span class="accent">.</span>
-                        </h1>
-                        <button mat-raised-button color="accent" class="loud-btn" [class.loud-btn-mobile]="isMobile"
-                            (click)="openContactModal()">
-                            Get In Touch.
-                        </button>-->
                 </div>
             </div>
         </mat-grid-tile>
     </mat-grid-list>
 </div>
+<div class="pop-bg" style="height: 5px;"></div>
+<div class="accent-bg" style="height: 5px;"></div>
 <div class="container dark-bg">
     <div class="content-strip">
         <h1 class="content-headline">Skills</h1>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 10" style="width: 150px; height: 20px;">
-            <polyline points="0,0 10,10 20,0 30,10 40,0 50,10 60,0 70,10 80,0 90,10 100,0 110, 10"
-                style="stroke-dashoffset: 2e-05; stroke-dasharray: none; stroke: #81c784; fill: none; stroke-width: 3;">
+            <polyline [attr.points]="squigglePoints.join(' ')" class="primary-squiggle">
             </polyline>
         </svg>
-        <mat-grid-list [cols]="isMedium ? 12 : 10" rowHeight="350px" style="overflow-x: visible; margin-top: 40px;">
+        <mat-grid-list [cols]="isMedium ? 12 : 10" rowHeight="350px" gutterSize="5px" class="skill-grid-list">
             <mat-grid-tile [colspan]="isMobile ? 10 : isMedium ? 4 : 2" rowspan="1" *ngFor="let skill of skills">
                 <mat-card class="skill-card">
                     <img [src]="skill.img" alt="NodeJS" class="skill-img">
@@ -73,18 +65,17 @@
     <mat-grid-list cols="2" rowHeight="100%" style="overflow-x: visible" gutterSize="0">
         <mat-grid-tile [colspan]="isMedium || isMobile ? 2 : 1" rowspan="1"
             class="accent-bg centered-content-container">
-            <div>
+            <div class="about-container">
                 <p class="about-me-headline">
                     Wesley Young
                 </p>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 10" style="width: 150px; height: 20px;">
-                    <polyline points="0,0 10,10 20,0 30,10 40,0 50,10 60,0 70,10 80,0 90,10 100,0 110, 10"
-                        style="stroke-dashoffset: 2e-05; stroke-dasharray: none; stroke: rgb(20, 20, 20); fill: none; stroke-width: 3;">
+                    <polyline [attr.points]="squigglePoints.join(' ')" class="pop-squiggle">
                     </polyline>
                 </svg>
                 <p class="about-me-txt">
-                    Is a full-stack developer currently living in Saint George, Ut. He also has experience in network
-                    administration, home automation, and high-end residential audio-visual systems.
+                    Is a full-stack developer currently living in Saint George, UT. He also has experience in network
+                    administration, pay-per-click marketing, home automation, and high-end residential audio-visual systems.
                 </p>
                 <!--<p class="about-me-txt">
                     Currently looking for work all over the U.S.
@@ -94,7 +85,7 @@
         <mat-grid-tile colspan="1" rowspan="1" class="centered-content-container" *ngIf="!isMedium && !isMobile">
             <div>
                 <div>
-                    <h1 class="modern-title">ABOUT ME<span class="accent">.</span></h1>
+                    <h1 class="modern-title">ABOUT ME<span class="pop">.</span></h1>
                 </div>
             </div>
         </mat-grid-tile>

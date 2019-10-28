@@ -1,3 +1,4 @@
+@import './custom-theme.scss';
 
 html, body { 
     height: 100%;
@@ -104,8 +105,6 @@ body {
   font-family: pacifico;
   color: whitesmoke;
   font-weight: 100;
-  /*margin: 0 !important;*/
-  /*text-decoration: underline #81c784;*/
 }
 
 .contact-cta-btn {
@@ -118,4 +117,44 @@ body {
   height: 50px;
   font-size: 24px;
   font-family: pacifico;
+}
+
+.dark-squiggle {
+  stroke-dashoffset: 2e-05;
+  stroke-dasharray: none;
+  stroke: rgb(20, 20, 20);
+  fill: none;
+  stroke-width: 3;
+}
+
+.primary-squiggle {
+  stroke-dashoffset: 2e-05;
+  stroke-dasharray: none;
+  stroke: $primary-color;
+  fill: none;
+  stroke-width: 3;
+}
+
+.accent-squiggle {
+  stroke-dashoffset: 2e-05;
+  stroke-dasharray: none;
+  stroke: $accent-color;
+  fill: none;
+  stroke-width: 3;
+}
+
+.warn-squiggle {
+  stroke-dashoffset: 2e-05;
+  stroke-dasharray: none;
+  stroke: $warn-color;
+  fill: none;
+  stroke-width: 3;
+}
+
+.pop-squiggle {
+  stroke-dashoffset: 2e-05;
+  stroke-dasharray: none;
+  stroke: $pop-color;
+  fill: none;
+  stroke-width: 3;
 }

@@ -1,3 +1,4 @@
+@import '../../custom-theme.scss';
 
 .loud-btn {
     z-index: 0;
@@ -44,7 +45,7 @@
     font-family: pacifico;
     pointer-events: none !important;
     /*text-decoration-line: underline;*/
-    text-decoration-color: #81c784;
+    text-decoration-color: $accent-color;
     text-shadow: 0 8px 10px black;
     margin: 0 !important;
 }
@@ -86,6 +87,7 @@
     border-radius: 100%;
     position: relative;
     margin-bottom: 50px;
+    margin-top: 122px;
 }
 
 .banner-img-mobile {
@@ -103,8 +105,13 @@
     background-repeat: no-repeat;
 }
 
+.skill-grid-list {
+    overflow-x: visible;
+    margin-top: 40px;
+}
+
 .skill-card {
-    background-color: transparent !important;
+    background-color: transparent;
     max-height: 100%;
     box-shadow: none !important;
 }
@@ -145,8 +152,20 @@
     background-color: rgb(20, 20, 20) !important;
 }
 
+.primary-bg {
+    background-color: $primary-color;
+}
+
 .accent-bg {
-    background-color: #81c784;
+    background-color: $accent-color;
+}
+
+.warn-bg {
+    background-color: $warn-color;
+}
+
+.pop-bg {
+    background-color: $pop-color;
 }
 
 .modern-title {
@@ -156,12 +175,16 @@
     color: whitesmoke;
     line-height: 220px;
     letter-spacing: 10px;
-    text-decoration: underline #81c784;
+    text-decoration: underline $accent-color;
     text-align: left;
     width: 100%;
     max-width: 550px;
     word-wrap: break-word;
     font-size: 220px;
+}
+
+.about-container {
+    transition: all .5s ease-in-out;
 }
 
 .about-me-headline {
@@ -178,9 +201,13 @@
     padding: 0 75px 0 75px;
 }
 
-/***
-    CSS Example
-***/
+.skew-left {
+    transform: skewY(-15deg) !important;
+}
+
+.skew-right {
+    transform: skewY(15deg) !important;
+}
 
 svg.intro {
     position: relative;

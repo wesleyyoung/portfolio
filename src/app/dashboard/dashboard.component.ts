@@ -32,6 +32,9 @@ export class DashboardComponent implements OnInit {
   public isMobile: boolean = this.api.isMobileWatcher;
   public isMedium: boolean = this.api.isMediumWatcher;
 
+  public isScrollingUp: boolean = this.api.isScrollingUpWatcher;
+  public isScrollingDn: boolean = this.api.isScrollingDnWatcher;
+
   public skills: Array<Skill> = [{
     name: 'Node',
     name_accent: 'JS',
@@ -92,10 +95,9 @@ export class DashboardComponent implements OnInit {
     img: './assets/imgs/linux.webp',
     color: '#f79c3d',
     rating: 4
-  }
-  ];
-  public titles: Array<any> = [
-    {
+  }];
+
+  public titles: Array<any> = [{
       txt: "Web Developer.",
       style: ""
     }, {
@@ -107,8 +109,8 @@ export class DashboardComponent implements OnInit {
     }, {
       txt: "Keyboard Warrior.",
       style: ""
-    }
-  ];
+    }];
+
   public titleIndex: number = 0;
   public title: any = this.titles[this.titleIndex];
   public titleChange;
@@ -119,6 +121,21 @@ export class DashboardComponent implements OnInit {
   public introBtn: Boolean = false;
 
   private ctx: CanvasRenderingContext2D;
+  
+  public squigglePoints: Array<string> = [
+    '0,0',
+    '10,10',
+    '20,0',
+    '30,10',
+    '40,0',
+    '50,10',
+    '60,0',
+    '70,10',
+    '80,0',
+    '90,10',
+    '100,0',
+    '110,10'
+  ];
 
   constructor(
     private api: ApiService,
@@ -136,6 +153,7 @@ export class DashboardComponent implements OnInit {
     iconRegistry.addSvgIcon('emptyStar', sanitizer.bypassSecurityTrustResourceUrl('assets/star-empty.svg'));
 
     window.addEventListener('resize', ev => {
+      
       this.canvas.nativeElement.setAttribute('height', window.innerHeight + 'px');
       this.canvas.nativeElement.setAttribute('width', window.innerWidth + 'px');
     });
@@ -182,6 +200,14 @@ export class DashboardComponent implements OnInit {
 
     this.api.isMedium.subscribe(isMed => {
       this.isMedium = isMed;
+    });
+
+    this.api.isScrollingUp.subscribe(isScrollingUp => {
+      this.isScrollingUp = isScrollingUp;
+    });
+
+    this.api.isScrollingDn.subscribe(isScrollingDn => {
+      this.isScrollingDn = isScrollingDn;
     });
 
     this.draw_skill_2();
