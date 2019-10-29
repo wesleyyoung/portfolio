@@ -178,10 +178,6 @@ export class DashboardComponent implements OnInit {
     ], this.ngZone);
 
     runtime.init();
-
-    setInterval(() => {
-
-    }, 1000);
   }
 
   ngOnInit() {

@@ -17,11 +17,27 @@ body {
 }
 
 .accent-dark-bg {
-  background-image: linear-gradient($accent-color, rgb(20, 20, 20));
+  background-image: linear-gradient(to left, $accent-color, rgb(20, 20, 20));
+}
+
+.dark-accent-bg {
+  background-image: linear-gradient(rgb(20, 20, 20), $accent-color);
 }
 
 .primary-accent-bg {
-  background-image: linear-gradient(right, $primary-color, $accent-color);
+  background-image: linear-gradient(to left, $primary-color, $accent-color);
+}
+
+.primary-warn-bg {
+  background-image: linear-gradient(to left, $primary-color, $warn-color);
+}
+
+.accent-warn-bg {
+  background-image: linear-gradient(to left, $accent-color, $warn-color);
+}
+
+.warn-pop-bg {
+  background-image: linear-gradient(to left, $warn-color, $pop-color);
 }
 
 .pacifico {

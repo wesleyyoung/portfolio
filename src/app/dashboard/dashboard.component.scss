@@ -176,7 +176,10 @@
     line-height: 220px;
     letter-spacing: 10px;
     /*text-decoration: underline $accent-color;*/
+    text-shadow: 5px 5px $pop-color;
     text-align: left;
+    margin-top: 0px;
+    margin-bottom: 0px;
     width: 100%;
     max-width: 550px;
     word-wrap: break-word;
