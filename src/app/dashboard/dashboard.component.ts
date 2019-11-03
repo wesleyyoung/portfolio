@@ -142,7 +142,7 @@ export class DashboardComponent implements OnInit {
     title: 'Vision Smart Homes - Saint George, UT',
     subtitle: 'Systems Programmer',
     dateRange: 'May 2018 - Present',
-    text: 'Installing and setting up high end routers, switches, Wi-Fi access points, TVs, home theaters, and integrating them with control systems such as Control 4 and Crestron.'
+    text: 'I install and program routers, switches, Wi-Fi access points, TVs, home theaters, and then integrate them with control systems such as Control 4 and Crestron.'
   }].reverse();
 
   public titleIndex: number = 0;

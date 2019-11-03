@@ -104,6 +104,17 @@ body {
   overflow: hidden;
 }
 
+.content-sm {
+  width: 100%;
+  align-self: center;
+  max-width: 600px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: inline-block;
+  text-align: auto;
+  overflow: visible;
+}
+
 .container {
   align-items: center;
   align-content: center;

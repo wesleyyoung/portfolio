@@ -72,7 +72,9 @@
                     </polyline>
                 </svg>
                 <p class="about-me-txt">
-                    Is a full-stack developer currently living in Saint George, UT. He also has experience in network
+                    I'm a full-stack developer currently living in Saint George, UT. I like to spend my free time
+                    working on personal projects (found on my NPM and Github accounts), hiking in beautiful Snow Canyon,
+                    and catching up with the latest web technologies. I also have experience in network
                     administration, pay-per-click marketing, home automation, and high-end residential audio-visual
                     systems.
                 </p>
@@ -89,8 +91,13 @@
         </mat-grid-tile>
     </mat-grid-list>
 </div>
-<div class="container warn-pop-bg">
-    <div class="content-strip">
+<div class="container dark-bg">
+    <div class="content-sm">
+        
+    </div>
+</div>
+<!--<div class="container warn-pop-bg">
+    <div class="content-sm">
         <div style="margin-bottom: 25px;">
             <h1 class="content-headline pop-shadow">Experience<span class="pop">.</span></h1>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 10" style="width: 75px; height: 10px;">
@@ -100,9 +107,7 @@
         </div>
         <div>
             <div style="height: 100%;">
-                <mat-card *ngFor="let exp of experiences; let i = index" class="experience-card"
-                    [class.experience-card-right]="isEven(i) && !isMobile && !isMedium"
-                    [class.experience-card-left]="!isEven(i) && !isMobile && !isMedium">
+                <mat-card *ngFor="let exp of experiences; let i = index" class="experience-card">
                     <mat-card-header>
                         <mat-card-title>{{exp.title}}</mat-card-title>
                         <mat-card-subtitle>{{exp.subtitle}}</mat-card-subtitle>
@@ -118,4 +123,4 @@
         </div>
     </div>
 
-</div>
+</div>-->
