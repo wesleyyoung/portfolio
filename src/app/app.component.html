@@ -1,13 +1,10 @@
 <mat-toolbar class="toolbar" [class.solid-nav-bar]="!atTop" [class.transparent]="atTop">
     <span class="my-name">Wesley Young<span class="pop">.</span></span>
     <span style="flex: 1 1 auto;"></span>
-    <button mat-button routerLink="/">
-        HOME
-    </button>
-    <button mat-button routerLink="about">
+    <a mat-button href="#about">
         ABOUT
-    </button>
-    <button mat-button>
+    </a>
+    <button mat-button (click)="openContactModal()">
         CONTACT
     </button>
 </mat-toolbar>
@@ -20,7 +17,7 @@
                     <h2 class="footer-headline">Contact Me<span class="warn">.</span></h2>
                     <p class="footer-txt">wesley.young.portfolio@gmail.com</p>
                     <p class="footer-txt">435.229.8832</p>
-                    <button mat-raised-button color="warn">Get In Touch</button>
+                    <button mat-raised-button color="warn" (click)="openContactModal()">Get In Touch</button>
                 </div>
 
             </mat-grid-tile>

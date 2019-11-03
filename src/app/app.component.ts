@@ -1,8 +1,8 @@
-import {
-  Component,
-  HostListener,
-  OnInit } from '@angular/core';
+import { Component, HostListener, OnInit, ViewChild } from '@angular/core';
+import { MatDialog } from '@angular/material';
 import { ApiService } from './api.service';
+import { ContactModalComponent } from './contact-modal/contact-modal.component';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -44,9 +44,27 @@ export class AppComponent implements OnInit {
   ];
 
   constructor(
-    private api: ApiService
+    private api: ApiService,
+    private dialog: MatDialog
   ) {
 
+  }
+
+  openContactModal(): void {
+
+    this.dialog.open(ContactModalComponent, {
+      panelClass: [
+        'contact-modal',
+        'dark-bg'
+      ]
+    });
+  }
+
+  scroll(id: string) {
+
+    let el = window.document.getElementById(id) as HTMLElement;
+    console.log(el);
+    el.scrollIntoView({behavior:"smooth"});
   }
 
   ngOnInit() {

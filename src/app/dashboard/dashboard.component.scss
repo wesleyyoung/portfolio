@@ -2,17 +2,14 @@
 
 .loud-btn {
     z-index: 0;
-    width: 0;
-    opacity: 0;
     height: 65px;
-    color: transparent;
+    width: 0;
     font-family: pacifico !important;
     font-size: 35px;
     border-radius: 50px 50px 50px 50px;
     padding-bottom: 10px !important;
     text-decoration: none;
     bottom: 122px;
-    transition: all 1s ease-in-out;
 }
 .loud-btn-mobile {
     font-size: 30px !important;
@@ -22,20 +19,8 @@
 .loud-btn:hover {
     text-decoration: underline;
     text-decoration-color: black;
+    background-color: $pop-color;
 }
-
-.loud-btn-show {
-    width: 100%;
-    color: $med-dark;
-    opacity: 1;
-}
-
-.banner {
-    /*background-color: #303f9f;*/
-    /*background-color: #002171;*/
-    /*background-image: url(../../assets/code_banner.webp);*/
-}
-
 .banner-title {
     color: whitesmoke;
     font-weight: 100;

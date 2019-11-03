@@ -17,8 +17,8 @@
                         </defs>
                     </svg>
                     <button mat-raised-button color="warn" class="loud-btn" [class.loud-btn-mobile]="isMobile"
-                        [class.loud-btn-show]="introBtn" (click)="openContactModal()">
-                        Get In Touch.
+                        [@expand]="introBtn ? 'big' : 'small'" (click)="openContactModal()">
+                        {{introBtnTxt}}
                     </button>
                 </div>
             </div>
@@ -59,7 +59,7 @@
         </mat-grid-list>
     </div>
 </div>
-<div class="full-height-container">
+<div class="full-height-container" id="about">
     <mat-grid-list cols="12" rowHeight="100%" style="overflow-x: visible" gutterSize="0">
         <mat-grid-tile [colspan]="isMedium || isMobile ? 12 : 7" rowspan="1"
             class="accent-bg centered-content-container">
