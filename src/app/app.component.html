@@ -16,27 +16,29 @@
     <div class="content">
         <mat-grid-list cols="6" rowHeight="250px" style="overflow-x: visible">
             <mat-grid-tile [colspan]="!isMobile ? 3 : 6" rowspan="1">
-                <h2 class="footer-headline">Contact</h2>
-                <div class="dash"></div>
-                <p class="footer-txt">wesley.young.portfolio@gmail.com</p>
-                <p class="footer-txt">435.229.8832</p>
-                <button mat-raised-button color="primary">Get In Touch</button>
+                <div style="text-align: left;">
+                    <h2 class="footer-headline">Contact Me<span class="warn">.</span></h2>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 10" style="width: 75px; height: 10px;">
+                        <polyline [attr.points]="squigglePoints.join(' ')" class="warn-squiggle">
+                        </polyline>
+                    </svg>
+                    <p class="footer-txt">wesley.young.portfolio@gmail.com</p>
+                    <p class="footer-txt">435.229.8832</p>
+                    <button mat-raised-button color="primary">Get In Touch</button>
+                </div>
+
             </mat-grid-tile>
-            <mat-grid-tile [colspan]="!isMobile ? 3 : 6" rowspan="1">
+            <!--<mat-grid-tile [colspan]="!isMobile ? 3 : 6" rowspan="1">
                 <h2 class="footer-headline">Site Map</h2>
                 <div class="dash"></div>
-                <p style="text-align: center;">
-                    <button mat-button color="accent" routerLink="/" style="padding: 0 25% 0 25%;">
-                        HOME
-                    </button>
-                    <button mat-button color="accent" routerLink="about" style="padding: 0 25% 0 25%;">
-                        ABOUT
-                    </button>
-                    <button mat-button color="accent" style="padding: 0 25% 0 25%;">
-                        CONTACT
-                    </button>
+                <p style="padding: 0 25% 0 25%;">
+                    <mat-nav-list>
+                        <mat-list-item *ngFor="let link of links">
+                            <a matLine>{{link.name}}</a>
+                        </mat-list-item>
+                    </mat-nav-list>
                 </p>
-            </mat-grid-tile>
+            </mat-grid-tile>-->
         </mat-grid-list>
     </div>
 </div>

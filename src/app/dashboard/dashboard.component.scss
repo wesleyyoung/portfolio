@@ -26,7 +26,7 @@
 
 .loud-btn-show {
     width: 100%;
-    color: rgb(20, 20, 20);
+    color: $med-dark;
     opacity: 1;
 }
 
@@ -165,6 +165,24 @@
 
 .pop-bg {
     background-color: $pop-color;
+}
+
+.pop-shadow {
+    text-shadow: 3px 3px $pop-color;
+}
+
+.experience-card {
+    text-align: left;
+    margin-bottom: 25px;
+    background-color: $warn-color;
+}
+
+.experience-card-right {
+    margin-left: 52% !important;
+}
+
+.experience-card-left {
+    margin-right: 52% !important;
 }
 
 .modern-title {

@@ -3,6 +3,7 @@
 
 /*$accent-color: #81c784;*/
 $soft-dark: #212121;
+$med-dark: rgb(20, 20, 20);
 
 $primary-color: #584053;
 $primary-txt-color: #ECE6CD;
@@ -118,14 +119,6 @@ $portfolio-warn: mat-palette($pro-warn);
 $portfolio-theme: mat-dark-theme($portfolio-primary, $portfolio-accent, $portfolio-warn);
 
 @include angular-material-theme($portfolio-theme);
-
-.content-headline {
-  color: white;
-  margin-bottom: 0 !important;
-  font-size: 60px;
-  font-weight: 300;
-  font-family: SrcSansProLight !important;
-}
 
 .footer {
   z-index: 100;

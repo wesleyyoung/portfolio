@@ -20,6 +20,29 @@ export class AppComponent implements OnInit {
   public isMobile: boolean = this.api.isMobileWatcher;
   public isMedium: boolean = this.api.isMediumWatcher;
 
+  public links: Array<any> = [{
+    name: 'HOME',
+    url: '/'
+  }, {
+    name: 'ABOUT',
+    url: 'about'
+  }];
+
+  public squigglePoints: Array<string> = [
+    '0,0',
+    '10,10',
+    '20,0',
+    '30,10',
+    '40,0',
+    '50,10',
+    '60,0',
+    '70,10',
+    '80,0',
+    '90,10',
+    '100,0',
+    '110,10'
+  ];
+
   constructor(
     private api: ApiService
   ) {

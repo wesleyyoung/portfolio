@@ -19,6 +19,13 @@ export interface Skill {
   color: string;
 }
 
+export interface Experience {
+  title: string;
+  subtitle: string;
+  dateRange: string;
+  text: string;
+}
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -98,18 +105,45 @@ export class DashboardComponent implements OnInit {
   }];
 
   public titles: Array<any> = [{
-      txt: "Web Developer.",
-      style: ""
-    }, {
-      txt: "Audio Visual Tech.",
-      style: ""
-    }, {
-      txt: "IT Wizard.",
-      style: ""
-    }, {
-      txt: "Keyboard Warrior.",
-      style: ""
-    }];
+    txt: "Web Developer.",
+    style: ""
+  }, {
+    txt: "Audio Visual Tech.",
+    style: ""
+  }, {
+    txt: "IT Wizard.",
+    style: ""
+  }, {
+    txt: "Keyboard Warrior.",
+    style: ""
+  }];
+
+  public experiences: Array<Experience> = [{
+    title: 'BidSync - American Fork, UT',
+    subtitle: 'Customer Service Associate',
+    dateRange: 'November 2014 to June 2015',
+    text: 'At BidSync I was responsible for assisting contractors and other small businesses in using the site. It was my first full-time job and it taught me a lot about how effective web-technologies can be in shaping how we interact in the public and private marketplace.'
+  }, {
+    title: 'Mountainland Applied Technology College - Lehi, UT',
+    subtitle: 'Certification in Web Development',
+    dateRange: 'August 2015 to May 2016',
+    text: 'I left my job at BidSync to persue my interest in Web Development. '
+  }, {
+    title: 'Bask Technology - Lehi, UT',
+    subtitle: 'Lead Coordinator',
+    dateRange: 'December 2015 to September 2016',
+    text: 'My responsibility at bask was to manage a monthly budget of ~$100,000 for Google AdWords campaigns and assist with increasing ad profitability. Within my first month of working at Bask, I improved the daily average revenue gained from online advertising from ~5% to above 400%'
+  }, {
+    title: 'Xactware Solutions - Lehi, UT',
+    subtitle: 'Intern',
+    dateRange: 'May 2016 to October 2016',
+    text: 'I worked with management in Xactware\'s Training department to design and build an internal tool for the purpose of scheduling ride-alongs between trainers and participating clients.'
+  }, {
+    title: 'Vision Smart Homes - Saint George, UT',
+    subtitle: 'Systems Programmer',
+    dateRange: 'May 2018 - Present',
+    text: 'Installing and setting up high end routers, switches, Wi-Fi access points, TVs, home theaters, and integrating them with control systems such as Control 4 and Crestron.'
+  }].reverse();
 
   public titleIndex: number = 0;
   public title: any = this.titles[this.titleIndex];
@@ -121,7 +155,7 @@ export class DashboardComponent implements OnInit {
   public introBtn: Boolean = false;
 
   private ctx: CanvasRenderingContext2D;
-  
+
   public squigglePoints: Array<string> = [
     '0,0',
     '10,10',
@@ -153,10 +187,14 @@ export class DashboardComponent implements OnInit {
     iconRegistry.addSvgIcon('emptyStar', sanitizer.bypassSecurityTrustResourceUrl('assets/star-empty.svg'));
 
     window.addEventListener('resize', ev => {
-      
+
       this.canvas.nativeElement.setAttribute('height', window.innerHeight + 'px');
       this.canvas.nativeElement.setAttribute('width', window.innerWidth + 'px');
     });
+  }
+
+  public isEven(n) {
+    return n % 2 == 0;
   }
 
   openContactModal(): void {
