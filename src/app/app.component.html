@@ -15,8 +15,8 @@
 <div class="container true-black footer">
     <div class="content">
         <mat-grid-list cols="6" rowHeight="250px" style="overflow-x: visible">
-            <mat-grid-tile [colspan]="!isMobile ? 3 : 6" rowspan="1">
-                <div style="text-align: left; padding-left: 20px;">
+            <mat-grid-tile [colspan]="!isMobile ? 3 : 6" rowspan="1" class="centered-footer-tile">
+                <div style="text-align: left;">
                     <h2 class="footer-headline">Contact Me<span class="warn">.</span></h2>
                     <p class="footer-txt">wesley.young.portfolio@gmail.com</p>
                     <p class="footer-txt">435.229.8832</p>
@@ -24,12 +24,14 @@
                 </div>
 
             </mat-grid-tile>
-            <mat-grid-tile [colspan]="!isMobile ? 3 : 6" rowspan="1">
-                <h1 class="content-headline">Thank You<span class="pop">!</span></h1>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 10" style="width: 75px; height: 10px;">
-                    <polyline [attr.points]="squigglePoints.join(' ')" class="pop-squiggle">
-                    </polyline>
-                </svg>
+            <mat-grid-tile [colspan]="!isMobile ? 3 : 6" rowspan="1" class="centered-footer-tile">
+                <div>
+                    <h1 class="footer-goodbye">Thank You<span class="pop">!</span></h1>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 10" style="width: 75px; height: 10px;">
+                        <polyline [attr.points]="squigglePoints.join(' ')" class="pop-squiggle">
+                        </polyline>
+                    </svg>
+                </div>
             </mat-grid-tile>
         </mat-grid-list>
     </div>

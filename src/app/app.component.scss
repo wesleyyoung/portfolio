@@ -15,3 +15,29 @@
     text-decoration: underline;
     text-decoration-color: $pop-color;
 }
+
+.centered-footer-tile {
+    width: 100%;
+    height: 100%;
+    line-height: 100%;
+    display: flex !important;
+}
+  
+.centered-footer-tile > .mat-figure > div {
+    vertical-align: middle;
+    display: inline-block;
+    line-height: 15;
+    width: 100%;
+    display: flex !important;
+}
+
+.footer-goodbye {
+    font-family: pacifico;
+    color: whitesmoke;
+    text-transform: capitalize;
+    margin-top: 0 !important;
+    font-weight: 100 !important;
+    margin-bottom: 0 !important;
+    font-size: 80px;
+    line-height: 1;
+}
