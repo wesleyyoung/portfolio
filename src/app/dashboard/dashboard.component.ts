@@ -18,10 +18,12 @@ import { ContactModalComponent } from '../contact-modal/contact-modal.component'
     trigger('expand', [
 
       state('small', style({
-        width: '0'
+        width: '0',
+        opacity: '0'
       })),
       state('big', style({
-        width: '100%'
+        width: '100%',
+        opacity: '1'
       })),
       transition('* => *', [
         animate('1.1s ease')
@@ -156,6 +158,8 @@ export class DashboardComponent implements OnInit {
     });
 
     this.draw_skill_2();
+
+    
 
     this.intro = true;
 

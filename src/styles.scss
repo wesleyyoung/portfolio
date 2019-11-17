@@ -20,6 +20,10 @@ body {
   background-image: linear-gradient(to left, $accent-color, rgb(20, 20, 20));
 }
 
+.accent-dark-radial-bg {
+  background-image: radial-gradient(farthest-corner at 100% 100%, $accent-color, rgb(20, 20, 20));
+}
+
 .dark-accent-bg {
   background-image: linear-gradient(rgb(20, 20, 20), $accent-color);
 }
@@ -32,6 +36,10 @@ body {
   background-image: linear-gradient(to left, $primary-color, $warn-color);
 }
 
+.warn-primary-bg {
+  background-image: linear-gradient(to right, $primary-color, $warn-color);
+}
+
 .accent-warn-bg {
   background-image: linear-gradient(to left, $accent-color, $warn-color);
 }
@@ -42,6 +50,10 @@ body {
 
 .soft-med-dark-bg {
   background-image: linear-gradient(to left, $soft-dark, $med-dark);
+}
+
+.primary-med-dark-bg {
+  background-image: linear-gradient(to top, $primary-color, $med-dark);
 }
 
 .pacifico {
