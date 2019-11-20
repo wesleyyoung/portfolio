@@ -4,7 +4,9 @@
         <mat-grid-tile colspan="6" rowspan="1">
             <div class="banner-container" [class.banner-container-mobile]="isMobile">
                 <div>
-                    <img src="./assets/imgs/profile.webp" class="banner-img" [class.banner-img-mobile]="isMobile">
+                    <img src="./assets/imgs/profile.webp" class="banner-img" [class.banner-img-mobile]="isMobile"
+                        data-aos="fade-in" data-aos-duration="1400" data-aos-easing="ease-in-out" data-aos-once="false"
+                        data-aos-mirror="true">
                     <svg class="intro" [class.go]="intro">
                         <text text-anchor="start" x="0" y="100" class="text text-stroke" clip-path="url(#text)"
                             [class.banner-title-mobile]="isMobile">
@@ -63,7 +65,8 @@
 <div class="full-height-container" id="about">
     <mat-grid-list cols="12" rowHeight="100%" style="overflow-x: visible" gutterSize="0">
         <mat-grid-tile [colspan]="isMedium || isMobile ? 12 : 7" rowspan="1"
-            class="accent-bg centered-content-container">
+            class="accent-bg centered-content-container" data-aos="fade-right" data-aos-duration="1000"
+            data-aos-easing="ease-in-out" data-aos-once="false" data-aos-mirror="true">
             <div class="about-container">
                 <p class="about-me-headline">
                     Wesley Young
@@ -84,20 +87,19 @@
                 </p>-->
             </div>
         </mat-grid-tile>
-        <mat-grid-tile colspan="5" rowspan="1" class="centered-content-container dark-bg"
-            *ngIf="!isMedium && !isMobile">
+        <mat-grid-tile colspan="5" rowspan="1" class="centered-content-container" *ngIf="!isMedium && !isMobile">
             <div>
                 <h1 class="modern-title" data-aos="fade-in" data-aos-duration="1000" data-aos-easing="ease-in-out"
-                    data-aos-once="false" data-aos-mirror="true">ABOUT ME<span
-                        class="warn">.</span></h1>
+                    data-aos-once="false" data-aos-mirror="true">ABOUT ME<span class="warn">.</span></h1>
             </div>
         </mat-grid-tile>
     </mat-grid-list>
 </div>
 <!--
-<div class="full-height-container ball-container accent-dark-radial-bg">
+<div class="full-height-container ball-container ball-bg">
     <div class="ball warn-primary-bg">
 
     </div>
-</div>
--->
+    <canvas #starfield class="starfield"></canvas>
+    <canvas #sunrise class="sunrise"></canvas>
+</div>-->

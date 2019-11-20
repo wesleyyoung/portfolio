@@ -23,7 +23,7 @@
             </mat-grid-tile>
             <mat-grid-tile [colspan]="!isMobile ? 3 : 6" rowspan="1" class="centered-footer-tile">
                 <div>
-                    <h1 class="footer-goodbye">Thank You<span class="pop">!</span></h1>
+                    <h1 class="footer-goodbye" [class.footer-goodbye-sm]="isMobile">Thank You<span class="pop">!</span></h1>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 10" style="width: 75px; height: 10px;">
                         <polyline [attr.points]="squigglePoints.join(' ')" class="pop-squiggle">
                         </polyline>

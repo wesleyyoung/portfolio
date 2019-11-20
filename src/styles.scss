@@ -4,7 +4,7 @@ html, body {
     height: 100%;
     width: 100%;
     margin: 0;
-    background-color: $soft-dark !important;
+    background-color: $med-dark !important;
     /*background-color: rgb(20, 20, 20) !important;*/
 }
 
@@ -18,10 +18,6 @@ body {
 
 .accent-dark-bg {
   background-image: linear-gradient(to left, $accent-color, rgb(20, 20, 20));
-}
-
-.accent-dark-radial-bg {
-  background-image: radial-gradient(farthest-corner at 100% 100%, $accent-color, rgb(20, 20, 20));
 }
 
 .dark-accent-bg {
@@ -137,6 +133,14 @@ body {
   text-align: center;
   width: 100%;
   height: 100vh;
+}
+
+.double-height-container {
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  width: 100%;
+  height: 200vh;
 }
 
 .molecular-field-bg {
