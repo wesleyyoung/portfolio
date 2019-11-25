@@ -4,7 +4,7 @@ import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { MatIconRegistry } from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { trigger, state, style, animate, transition } from '@angular/animations';
-import { ApiService, Skill, Experience } from '../api.service';
+import { ApiService, Skill, Experience, Project } from '../api.service';
 import { ContactModalComponent } from '../contact-modal/contact-modal.component';
 
 @Component({
@@ -40,6 +40,8 @@ export class DashboardComponent implements OnInit {
   public isScrollingDn: boolean = this.api.isScrollingDnWatcher;
 
   public skills: Array<Skill> = this.api.skills;
+
+  public projects: Array<Project> = this.api.projects;
 
   public titles: Array<any> = [{
     txt: "Web Developer.",
@@ -128,6 +130,14 @@ export class DashboardComponent implements OnInit {
         'dark-bg'
       ]
     });
+  }
+
+  public downloadFile(url: string) {
+    this.api.downloadFile(url, (data) => {
+      
+    }, err => {
+      console.log(err);
+    })
   }
 
   public draw_skill_2(): void {

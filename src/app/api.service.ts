@@ -30,6 +30,16 @@ export interface Skill {
   color: string;
 }
 
+export interface Project {
+  name: string;
+  name_accent: string;
+  img: string;
+  color: string;
+  txtColor: string;
+  link: string;
+  desc: string;
+}
+
 export interface Experience {
   title: string;
   subtitle: string;
@@ -123,6 +133,16 @@ export class ApiService {
     rating: 4
   }];
 
+  public projects: Array<Project> = [{
+    name: 'Mamba',
+    name_accent: 'Fi',
+    color: '#F97B4F',
+    txtColor: '#212121',
+    img: './assets/imgs/mambafi.webp',
+    link: 'downloadMambaFi',
+    desc: 'A desktop application I created using ElectronJS and Angular 8. It\'s beautiful app for managing, exporting, and adding new Wi-Fi profiles in Windows 10. Perfect for IT and Home Automation Techs who set-up Wi-Fi regularly and need to collaborate with others.'
+  }];
+
   public experiences: Array<Experience> = [{
     title: 'BidSync - American Fork, UT',
     subtitle: 'Customer Service Associate',
@@ -194,7 +214,20 @@ export class ApiService {
         data => {
           success(data);
         },
-        error  => {
+        error => {
+          err(error);
+        }
+      )
+  }
+
+  public downloadFile(url: string, success: Function, err: Function): void {
+
+    this.http.get('https://wesprodev.com/' + url)
+      .subscribe(
+        data => {
+          success(data);
+        },
+        error => {
           err(error);
         }
       )

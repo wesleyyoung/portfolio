@@ -36,6 +36,11 @@
         res.end();
     });
 
+    app.get('/downloadMambaFi', (req, res) => {
+        const mambaFi = `${__dirname}/../assets/MambaFiSetup.exe`;
+        res.download(mambaFi);
+    });
+
     async function send_mail(contactor) {
 
         let transporter = nodemailer.createTransport({
