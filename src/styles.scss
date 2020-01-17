@@ -24,6 +24,10 @@ body {
   background-image: linear-gradient(rgb(20, 20, 20), $accent-color);
 }
 
+.dark-primary-bg {
+  background-image: linear-gradient(rgb(20, 20, 20), $primary-color);
+}
+
 .primary-accent-bg {
   background-image: linear-gradient(to left, $primary-color, $accent-color);
 }

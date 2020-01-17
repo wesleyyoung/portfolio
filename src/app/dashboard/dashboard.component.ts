@@ -132,14 +132,6 @@ export class DashboardComponent implements OnInit {
     });
   }
 
-  public downloadFile(url: string) {
-    this.api.downloadFile(url, (data) => {
-      
-    }, err => {
-      console.log(err);
-    })
-  }
-
   public draw_skill_2(): void {
 
     const moleculeField: MoleculeField = new MoleculeField(this.ctx, 45);

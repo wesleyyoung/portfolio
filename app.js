@@ -13,7 +13,7 @@
     const 
         privatekey = fs.readFileSync('/etc/letsencrypt/live/wesprodev.com/privkey.pem', 'utf8'),
         certificate = fs.readFileSync('/etc/letsencrypt/live/wesprodev.com/cert.pem', 'utf8'),
-        ca = fs.readFileSync('/etc/letsencrypt/live/weprodev.com/fullchain.pem', 'utf8'),
+        ca = fs.readFileSync('/etc/letsencrypt/live/wesprodev.com/fullchain.pem', 'utf8'),
         credentials = {
             key: privatekey,
             cert: certificate,
@@ -24,6 +24,7 @@
     app.use(bodyParser.json());
 
     app.use('/', express.static(__dirname + '/dist/portfolio'));
+    app.use(`${__dirname}/../assets/`);
     app.use('/node_modules', express.static(__dirname + '/node_modules'));
 
     app.set('PORT', process.env.PORT || 80);

@@ -55,45 +55,41 @@
                             aria-hidden="false" aria-label="star" class="skill-star"></mat-icon>
                     </mat-card-content>
                     <mat-card-actions>
-                        <button mat-button [style.color]="skill.color" class="skill-btn">MORE</button>
+                        <!--<button mat-button [style.color]="skill.color" class="skill-btn">MORE</button>-->
                     </mat-card-actions>
                 </mat-card>
             </mat-grid-tile>
         </mat-grid-list>
     </div>
 </div>
-<div class="container dark-bg">
-    <div class="content-strip">
-        <h1 class="content-headline">Projects<span class="warn">.</span></h1>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 10" style="width: 75px; height: 10px;">
-            <polyline [attr.points]="squigglePoints.join(' ')" class="warn-squiggle">
-            </polyline>
-        </svg>
+<div class="full-height-container dark-primary-bg">
 
+    <!--<h1 class="content-headline" style="margin-bottom: 25px">Projects<span class="primary">.</span></h1>-->
+    <mat-grid-list cols="1" rowHeight="100%" gutterSize="5px">
+        <mat-grid-tile colspan="1" rowspan="1" *ngFor="let proj of projects">
+            <mat-card class="transparent" data-aos="fade-in" data-aos-duration="700" data-aos-easing="ease-in-out"
+                data-aos-once="false" data-aos-mirror="true" style="box-shadow: none !important;">
+                <mat-card-header>
+                    <mat-card-subtitle></mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image style="width: 100%" [src]="proj.img">
+                <mat-card-content>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 10" style="width: 75px; height: 10px;">
+                        <polyline [attr.points]="squigglePoints.join(' ')" class="warn-squiggle">
+                        </polyline>
+                    </svg>
+                    <p style="font-size: 16px; font-family: SrcSansPro;">
+                        {{proj.desc}}
+                    </p>
+                </mat-card-content>
+                <mat-card-actions>
+                    <a mat-button [style.background-color]="proj.color" [style.color]="proj.txtColor"
+                        class="proj-btn" [href]="proj.link">LEARN MORE</a>
+                </mat-card-actions>
+            </mat-card>
+        </mat-grid-tile>
+    </mat-grid-list>
 
-        <mat-grid-list cols="3" rowHeight="600px" gutterSize="5px">
-            <mat-grid-tile colspan="3" rowspan="1" *ngFor="let proj of projects">
-                <mat-card class="skill-card dark-bg" data-aos="fade-in" data-aos-duration="700"
-                    data-aos-easing="ease-in-out" data-aos-once="false" data-aos-mirror="true"
-                    style="max-width: 400px;">
-                    <mat-card-header>
-                        <mat-card-title>{{proj.name}}<span [style.color]="proj.color">{{proj.name_accent}}</span>
-                        </mat-card-title>
-                        <mat-card-subtitle></mat-card-subtitle>
-                    </mat-card-header>
-                    <img mat-card-image style="width: 100%" [src]="proj.img">
-                    <mat-card-content>
-                        <p>
-                            {{proj.desc}}
-                        </p>
-                    </mat-card-content>
-                    <mat-card-actions>
-                        <button mat-button [style.background-color]="proj.color" [style.color]="proj.txtColor" class="proj-btn" (click)="downloadFile(proj.url)">DOWNLOAD</button>
-                    </mat-card-actions>
-                </mat-card>
-            </mat-grid-tile>
-        </mat-grid-list>
-    </div>
 </div>
 <div class="full-height-container" id="about">
     <mat-grid-list cols="12" rowHeight="100%" style="overflow-x: visible" gutterSize="0">

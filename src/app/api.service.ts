@@ -13,6 +13,7 @@ import {
  } from 'rxjs';
 import { DOCUMENT } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
+import { saveAs } from 'file-saver';
 
 export interface ContactForm {
   name: string,
@@ -138,9 +139,9 @@ export class ApiService {
     name_accent: 'Fi',
     color: '#F97B4F',
     txtColor: '#212121',
-    img: './assets/imgs/mambafi.webp',
-    link: 'downloadMambaFi',
-    desc: 'A desktop application I created using ElectronJS and Angular 8. It\'s beautiful app for managing, exporting, and adding new Wi-Fi profiles in Windows 10. Perfect for IT and Home Automation Techs who set-up Wi-Fi regularly and need to collaborate with others.'
+    img: './assets/imgs/mambafi.png',
+    link: 'https://mambafi.com',
+    desc: 'View passwords, export, and import Windows Wi-Fi profiles.'
   }];
 
   public experiences: Array<Experience> = [{
@@ -210,19 +211,6 @@ export class ApiService {
   public contactMe(form: ContactForm, success: Function, err: Function): void {
 
     this.http.post('https://wesprodev.com/contact', form)
-      .subscribe(
-        data => {
-          success(data);
-        },
-        error => {
-          err(error);
-        }
-      )
-  }
-
-  public downloadFile(url: string, success: Function, err: Function): void {
-
-    this.http.get('https://wesprodev.com/' + url)
       .subscribe(
         data => {
           success(data);
